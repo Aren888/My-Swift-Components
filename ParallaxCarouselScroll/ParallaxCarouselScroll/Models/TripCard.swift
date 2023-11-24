@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Model for a trip card with title, subtitle, and image
 struct TripCard: Identifiable, Hashable {
     var id: UUID = .init()
     var title: String
@@ -14,6 +15,7 @@ struct TripCard: Identifiable, Hashable {
     var image: String
 }
 
+// Sample trip cards data
 var tripCards: [TripCard] = [
     .init(title: "London", subTitle: "England", image: "pic 1"),
     .init(title: "New York", subTitle: "USA", image: "pic 2"),

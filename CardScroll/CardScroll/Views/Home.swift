@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct Home: View {
+    // MARK: - State and Environment Variables
     
     @State private var allExpenses: [Expense] = []
     @State private var activeCard: UUID?
     
     @Environment(\.colorScheme) private var scheme
+    
+    // MARK: - Body
+    
     var body: some View {
         ScrollView(.vertical) {
             VStack(spacing: 0) {
+                // Header
                 VStack(alignment: .leading, spacing: 15, content: {
                     Text("Hello iJustine")
                         .font(.largeTitle.bold())
                         .frame(height: 45)
                         .padding(.horizontal, 15)
                     
+                    // Card Scroll
                     GeometryReader {
                         let rect = $0.frame(in: .scrollView)
                         let minY = rect.minY.rounded()
@@ -32,9 +38,7 @@ struct Home: View {
                                     ZStack {
                                         if minY == 75.0 {
                                             CardView(card)
-                                            
                                         } else {
-                                            
                                             if activeCard == card.id {
                                                 CardView(card)
                                             } else {
@@ -56,9 +60,12 @@ struct Home: View {
                     }
                     .frame(height: 125)
                 })
+                
+                // Expense List
                 LazyVStack(spacing: 15) {
+                    // Filter Menu
                     Menu {
-                        
+                        // TODO: Implement filter functionality
                     } label: {
                         HStack(spacing: 4) {
                             Text("Filter By")
@@ -69,6 +76,7 @@ struct Home: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     
+                    // Expense Cards
                     ForEach(allExpenses) { expense in
                         ExpenseCardView(expense)
                     }
@@ -112,11 +120,14 @@ struct Home: View {
         }
     }
     
+    // MARK: - Helper Functions
+    
     func backgroundLimitOffset(_ proxy: GeometryProxy) -> CGFloat {
         let minY = proxy.frame(in: .scrollView).minY
-        
         return minY < 100 ? -minY + 100 : 0
     }
+    
+    // MARK: - CardView
     
     @ViewBuilder
     func CardView(_ card: Card) -> some View {
@@ -143,6 +154,7 @@ struct Home: View {
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
                     .scaleEffect(scale, anchor: .bottom)
+                
                 VStack(alignment: .leading, spacing: 4, content: {
                     Spacer(minLength: 0)
                     
@@ -162,6 +174,8 @@ struct Home: View {
         }
         .padding(.horizontal, 15)
     }
+    
+    // MARK: - ExpenseCardView
     
     @ViewBuilder
     func ExpenseCardView(_ expense: Expense) -> some View {
@@ -186,15 +200,17 @@ struct Home: View {
     }
 }
 
+// MARK: - CustomScrollBehavior
+
 struct CustomScrollBehavior: ScrollTargetBehavior {
     func updateTarget(_ target: inout ScrollTarget, context: TargetContext) {
         if target.rect.minY < 75 {
             target.rect = .zero
         }
     }
-    
-    
 }
+
+// MARK: - Preview
 
 #Preview {
     ContentView()

@@ -8,23 +8,31 @@
 import SwiftUI
 
 struct Home: View {
+    // MARK: - Properties
+    
     @State private var activeIntro: PageIntro = pageIntros[0]
     @State private var emailID: String = ""
     @State private var password: String = ""
     @State private var keyboardHeight: CGFloat = 0
+    
+    // MARK: - Body
+    
     var body: some View {
         GeometryReader {
             let size = $0.size
             
+            // IntroView to display onboarding pages
             IntroView(intro: $activeIntro, size: size) {
                 VStack(spacing: 10) {
+                    // Custom text fields for email and password
                     CustomTextField(text: $emailID, hint: "Email Address", leadingIcon: Image(systemName: "envelope"))
                     CustomTextField(text: $emailID, hint: "Password", leadingIcon: Image(systemName: "lock"), isPassword: true)
                     
                     Spacer(minLength: 10)
                     
+                    // Continue button
                     Button {
-                        
+                        // TODO: Implement action for Continue button
                     } label: {
                         Text("Continue")
                             .fontWeight(.semibold)
@@ -41,14 +49,12 @@ struct Home: View {
             }
         }
         .padding(15)
-        
         .offset(y: -keyboardHeight)
         .ignoresSafeArea(.keyboard, edges: .all)
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { output in
             if let info = output.userInfo, let height = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {
                 keyboardHeight = height
             }
-            
         }
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
             keyboardHeight = 0
@@ -57,10 +63,13 @@ struct Home: View {
     }
 }
 
+// MARK: - Preview
+
 #Preview {
     ContentView()
 }
 
+// MARK: - IntroView
 
 struct IntroView<Actionview: View>: View {
     @Binding var intro: PageIntro
@@ -78,6 +87,7 @@ struct IntroView<Actionview: View>: View {
     
     var body: some View {
         VStack {
+            // Display onboarding page image
             GeometryReader {
                 let size = $0.size
                 
@@ -92,6 +102,7 @@ struct IntroView<Actionview: View>: View {
             
             VStack(alignment: .leading, spacing: 10) {
                 Spacer(minLength: 0)
+                // Display onboarding page title and subtitle
                 Text(intro.title)
                     .font(.system(size: 40))
                     .fontWeight(.black)
@@ -99,7 +110,9 @@ struct IntroView<Actionview: View>: View {
                     .font(.caption)
                     .foregroundStyle(.gray)
                     .padding(.top, 15)
+                
                 if !intro.displaysAction {
+                    // Display progress indicator and Next button
                     Group {
                         Spacer(minLength: 25)
                         
@@ -124,6 +137,7 @@ struct IntroView<Actionview: View>: View {
                         .frame(maxWidth: .infinity)
                     }
                 } else {
+                    // Display custom action view
                     actionView
                         .offset(y: showView ? 0 : size.height / 2)
                         .opacity(showView ? 1 : 0)
@@ -136,6 +150,7 @@ struct IntroView<Actionview: View>: View {
         .offset(y: hideWholeView ? size.height / 2 : 0)
         .opacity(hideWholeView ? 0 : 1)
         .overlay(alignment: .topLeading) {
+            // Display back button if not on the first page
             if intro != pageIntros.first {
                 Button {
                     changeIntro(true)
@@ -152,37 +167,40 @@ struct IntroView<Actionview: View>: View {
             }
         }
         .onAppear {
+            // Animate the appearance of the IntroView
             withAnimation(.spring(response: 0.8, dampingFraction: 0.8, blendDuration: 0)) {
                 showView = true
             }
         }
     }
     
+    // Change to the next or previous onboarding page
     func changeIntro(_ isPrevious: Bool = false) {
-        
+        // Hide the IntroView with animation
         withAnimation(.spring(response: 0.8, dampingFraction: 0.8, blendDuration: 0).delay(0.1)) {
             hideWholeView = true
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            // Change to the next or previous page
             if let index = pageIntros.firstIndex(of: intro), (isPrevious ? index != 0 : index != pageIntros.count - 1) {
                 intro = isPrevious ?  pageIntros[index - 1] : pageIntros[index + 1]
             } else {
                 intro =  isPrevious ? pageIntros[0] : pageIntros[pageIntros.count - 1]
             }
             
+            // Show the IntroView with animation
             hideWholeView = false
             showView = false
             
             withAnimation(.spring(response: 0.8, dampingFraction: 0.8, blendDuration: 0).delay(0.1)) {
                 showView = true
             }
-            
         }
     }
     
+    // Filter out pages that display custom action views
     var filteredPages: [PageIntro] {
         return pageIntros.filter { !$0.displaysAction }
     }
-    
 }

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// MARK: - Expense Model
+
+/// A model representing an expense with a unique identifier, amount spent, product description, and spend type.
 struct Expense: Identifiable {
     var id: UUID = UUID()
     var amountSpent: String
@@ -14,6 +17,9 @@ struct Expense: Identifiable {
     var spendType: String
 }
 
+// MARK: - Sample Expenses
+
+/// An array containing sample expenses for testing and demonstration purposes.
 var expenses: [Expense] = [
     Expense(amountSpent: "$482", product: "Amazon Purchase", spendType: "Groceries"),
     Expense(amountSpent: "$102", product: "Youtube Premium", spendType: "Streaming"),

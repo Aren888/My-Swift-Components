@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// View representing a custom indicator for tracking progress through pages
 struct CustomIndicatorView: View {
     
     var totalPages: Int
@@ -16,6 +17,7 @@ struct CustomIndicatorView: View {
     
     var body: some View {
         HStack(spacing: 8) {
+            // Display circles for each page with active or inactive tint
             ForEach(0..<totalPages, id: \.self) {
                 Circle()
                     .fill(currentPage == $0 ? activeTint : inActiveTint)
@@ -24,6 +26,8 @@ struct CustomIndicatorView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     ContentView()

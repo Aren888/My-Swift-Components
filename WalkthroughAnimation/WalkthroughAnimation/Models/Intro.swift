@@ -13,8 +13,8 @@ struct Intro: Identifiable {
     var textColor: Color
     var circleColor: Color
     var bgColor: Color
-    var circleOffset: CGFloat = 0
-    var textOffset: CGFloat = 0
+    var circleOffset: CGFloat = 0 // TODO: Add a description for the purpose of circleOffset
+    var textOffset: CGFloat = 0 // TODO: Add a description for the purpose of textOffset
 }
 
 var sampleIntros: [Intro] = [
