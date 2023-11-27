@@ -2,7 +2,7 @@
 //  BlurCardsApp.swift
 //  BlurCards
 //
-//  Created by Solicy Ios on 24.11.23.
+//  Created by Solicy Ios on 27.11.23.
 //
 
 import SwiftUI
