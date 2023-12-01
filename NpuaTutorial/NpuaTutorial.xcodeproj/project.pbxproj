@@ -14,6 +14,12 @@
 		8B50C2D12B191B1E00E5AD98 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2D02B191B1E00E5AD98 /* LoginView.swift */; };
 		8B50C2D32B19201E00E5AD98 /* RegistrationView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2D22B19201E00E5AD98 /* RegistrationView .swift */; };
 		8B50C2D62B19226700E5AD98 /* TextFieldsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2D52B19226700E5AD98 /* TextFieldsModifier.swift */; };
+		8B50C2D92B1927B600E5AD98 /* NpuaTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2D82B1927B600E5AD98 /* NpuaTabView.swift */; };
+		8B50C2DD2B1A54E500E5AD98 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2DC2B1A54E500E5AD98 /* FeedView.swift */; };
+		8B50C2E12B1A553B00E5AD98 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2E02B1A553B00E5AD98 /* ExploreView.swift */; };
+		8B50C2E52B1A55AD00E5AD98 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2E42B1A55AD00E5AD98 /* CreateThreadView.swift */; };
+		8B50C2E92B1A55F300E5AD98 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2E82B1A55F300E5AD98 /* ActivityView.swift */; };
+		8B50C2ED2B1A561A00E5AD98 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2EC2B1A561A00E5AD98 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		8B50C2D02B191B1E00E5AD98 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8B50C2D22B19201E00E5AD98 /* RegistrationView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationView .swift"; sourceTree = "<group>"; };
 		8B50C2D52B19226700E5AD98 /* TextFieldsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsModifier.swift; sourceTree = "<group>"; };
+		8B50C2D82B1927B600E5AD98 /* NpuaTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NpuaTabView.swift; sourceTree = "<group>"; };
+		8B50C2DC2B1A54E500E5AD98 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		8B50C2E02B1A553B00E5AD98 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		8B50C2E42B1A55AD00E5AD98 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
+		8B50C2E82B1A55F300E5AD98 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		8B50C2EC2B1A561A00E5AD98 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +100,14 @@
 		8B50C2C82B191A6E00E5AD98 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8B50C2EA2B1A561200E5AD98 /* Profile */,
+				8B50C2E62B1A55E900E5AD98 /* Activity */,
+				8B50C2DE2B1A551E00E5AD98 /* Explore */,
 				8B50C2CD2B191AC300E5AD98 /* Authentication */,
+				8B50C2DA2B1A54D100E5AD98 /* Feed */,
 				8B50C2CE2B191AEF00E5AD98 /* Root */,
+				8B50C2D72B19278800E5AD98 /* TabBar */,
+				8B50C2E22B1A556F00E5AD98 /* ThreadCreation */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -154,6 +172,94 @@
 				8B50C2D52B19226700E5AD98 /* TextFieldsModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		8B50C2D72B19278800E5AD98 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2D82B1927B600E5AD98 /* NpuaTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8B50C2DA2B1A54D100E5AD98 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2DB2B1A54D900E5AD98 /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		8B50C2DB2B1A54D900E5AD98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2DC2B1A54E500E5AD98 /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B50C2DE2B1A551E00E5AD98 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2DF2B1A553400E5AD98 /* View */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		8B50C2DF2B1A553400E5AD98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2E02B1A553B00E5AD98 /* ExploreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B50C2E22B1A556F00E5AD98 /* ThreadCreation */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2E32B1A557C00E5AD98 /* View */,
+			);
+			path = ThreadCreation;
+			sourceTree = "<group>";
+		};
+		8B50C2E32B1A557C00E5AD98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2E42B1A55AD00E5AD98 /* CreateThreadView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B50C2E62B1A55E900E5AD98 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2E72B1A55EE00E5AD98 /* View */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		8B50C2E72B1A55EE00E5AD98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2E82B1A55F300E5AD98 /* ActivityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B50C2EA2B1A561200E5AD98 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2EB2B1A561500E5AD98 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		8B50C2EB2B1A561500E5AD98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B50C2EC2B1A561A00E5AD98 /* ProfileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,10 +332,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B50C2DD2B1A54E500E5AD98 /* FeedView.swift in Sources */,
 				8B50C2D32B19201E00E5AD98 /* RegistrationView .swift in Sources */,
 				8B50C2D62B19226700E5AD98 /* TextFieldsModifier.swift in Sources */,
+				8B50C2E92B1A55F300E5AD98 /* ActivityView.swift in Sources */,
+				8B50C2E52B1A55AD00E5AD98 /* CreateThreadView.swift in Sources */,
 				8B50C2D12B191B1E00E5AD98 /* LoginView.swift in Sources */,
 				8B50C2B52B1919EC00E5AD98 /* ContentView.swift in Sources */,
+				8B50C2D92B1927B600E5AD98 /* NpuaTabView.swift in Sources */,
+				8B50C2E12B1A553B00E5AD98 /* ExploreView.swift in Sources */,
+				8B50C2ED2B1A561A00E5AD98 /* ProfileView.swift in Sources */,
 				8B50C2B32B1919EC00E5AD98 /* NpuaTutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
