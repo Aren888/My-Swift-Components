@@ -9,10 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     
-    @State private var email = ""
-    @State private var password = ""
-    @State private var fullName = ""
-    @State private var userName = ""
+    @StateObject var viewModel = RegistrationViewModel()
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -27,21 +24,21 @@ struct RegistrationView: View {
                 .padding()
             
             VStack {
-                TextField("Enter your email", text: $email)
+                TextField("Enter your email", text: $viewModel.email)
                     .modifier(TextFieldsModifier())
                 
-                SecureField("Enter your password", text: $password)
+                SecureField("Enter your password", text: $viewModel.password)
                     .modifier(TextFieldsModifier())
                 
-                TextField("Enter full name", text: $fullName)
+                TextField("Enter full name", text: $viewModel.fullName)
                     .modifier(TextFieldsModifier())
                 
-                TextField("Enter username", text: $userName)
+                TextField("Enter username", text: $viewModel.userName)
                     .modifier(TextFieldsModifier())
             }
             
             Button {
-                // Add your sign-up logic here
+                Task { try await viewModel.createUser() }
             } label: {
                 Text("Sign Up")
                     .font(.subheadline)
