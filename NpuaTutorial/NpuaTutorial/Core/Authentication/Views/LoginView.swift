@@ -25,6 +25,7 @@ struct LoginView: View {
                 
                 VStack {
                     TextField("Enter your email", text: $viewModel.email)
+                        .autocapitalization(.none)
                         .modifier(TextFieldsModifier())
                         .autocorrectionDisabled()
                     
