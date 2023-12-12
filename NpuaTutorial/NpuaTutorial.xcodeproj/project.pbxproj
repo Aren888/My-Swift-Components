@@ -371,10 +371,10 @@
 		8B50C2EA2B1A561200E5AD98 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				8B21AB8A2B27A250003E4671 /* ViewModel */,
 				8B6F613C2B22657C00E7F268 /* EditProfile */,
 				8BE5603F2B21114800B28B9A /* Model */,
 				8B50C2EB2B1A561500E5AD98 /* View */,
+				8B21AB8A2B27A250003E4671 /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
