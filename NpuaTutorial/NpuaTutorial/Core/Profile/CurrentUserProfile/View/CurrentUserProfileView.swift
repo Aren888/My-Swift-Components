@@ -10,14 +10,7 @@ import SwiftUI
 struct CurrentUserProfileView: View {
     
     @StateObject var viewModel = CurrentUserProfileViewModel()
-    @State private var selectedFilter: ProfileThreadFilter = .threads
-    @Namespace private var animation
-    
-    private var filterBarWidth: CGFloat {
-        let count = CGFloat(ProfileThreadFilter.allCases.count)
-        return UIScreen.main.bounds.width / count - 16
-    }
-    
+    @State private var showEditProfile = false
     private var currentUser: User? {
         return viewModel.currentUser
     }
@@ -32,7 +25,7 @@ struct CurrentUserProfileView: View {
                     
                     
                     Button {
-                        // Add action for the "Follow" button
+                        showEditProfile.toggle() 
                     } label: {
                         Text("Edit Profile")
                             .font(.subheadline)
@@ -46,12 +39,14 @@ struct CurrentUserProfileView: View {
                                     .stroke(Color(.systemGray4), lineWidth: 1)
                             }
                     }
-                    
                     // User content list view
-                    
                     UserContentListView()
                 }
             }
+            .sheet(isPresented: $showEditProfile, content: {
+                EditProfileView()
+                    .environmentObject(viewModel)
+            })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
