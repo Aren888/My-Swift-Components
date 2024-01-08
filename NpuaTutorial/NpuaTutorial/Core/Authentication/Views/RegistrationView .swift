@@ -14,7 +14,6 @@ struct RegistrationView: View {
     
     var body: some View {
         VStack {
-            
             Spacer()
             
             Image("threads-app-icon")
@@ -25,6 +24,7 @@ struct RegistrationView: View {
             
             VStack {
                 TextField("Enter your email", text: $viewModel.email)
+                    .autocapitalization(.none)
                     .modifier(TextFieldsModifier())
                 
                 SecureField("Enter your password", text: $viewModel.password)
@@ -34,6 +34,7 @@ struct RegistrationView: View {
                     .modifier(TextFieldsModifier())
                 
                 TextField("Enter username", text: $viewModel.userName)
+                    .autocapitalization(.none)
                     .modifier(TextFieldsModifier())
             }
             
@@ -71,8 +72,6 @@ struct RegistrationView: View {
     }
 }
 
-#if DEBUG
 #Preview {
     RegistrationView()
 }
-#endif
