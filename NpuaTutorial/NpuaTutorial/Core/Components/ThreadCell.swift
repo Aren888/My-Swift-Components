@@ -2,61 +2,66 @@
 //  ThreadCell.swift
 //  NpuaTutorial
 //
-//  Created by Solicy Ios on 01.12.23.
+//  Created by Solicy Ios on 08.01.24.
 //
 
 import SwiftUI
 
 struct ThreadCell: View {
+    
+    let thread: Thread
+    
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
-                CircularProfileImageView()
+                
+                CircularProfileImageView(user: thread.user, size: .small)
                 
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text("alex.2001")
+                        
+                        Text(thread.user?.userName ?? "")
                             .font(.footnote)
                             .fontWeight(.semibold)
                         Spacer()
                         
-                        Text("10m")
+                        Text(thread.timestamp.timestampString())
                             .font(.caption)
                             .foregroundStyle(Color(.systemGray3))
                         
                         Button(action: {
-                            // Add your ellipsis button action here
+                            
                         }) {
                             Image(systemName: "ellipsis")
                                 .foregroundStyle(Color(.darkGray))
                         }
                     }
                     
-                    Text("Formula 1 champion")
+                    Text(thread.caption)
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
                     HStack(spacing: 16) {
                         Button(action: {
-                            // Add your heart button action here
+                            
                         }) {
                             Image(systemName: "heart")
                         }
                         
                         Button(action: {
-                            // Add your bubble.right button action here
+                            
                         }) {
                             Image(systemName: "bubble.right")
                         }
                         
                         Button(action: {
-                            // Add your arrow.rectanglepath button action here
+                            
                         }) {
                             Image(systemName: "arrow.rectanglepath")
                         }
                         
                         Button(action: {
-                            // Add your paperplane button action here
+                            
                         }) {
                             Image(systemName: "paperplane")
                         }
@@ -71,6 +76,8 @@ struct ThreadCell: View {
     }
 }
 
-#Preview {
-    ThreadCell()
+struct ThreadCell_Previews: PreviewProvider {
+    static var previews: some View {
+        ThreadCell(thread: dev.thread)
+    }
 }

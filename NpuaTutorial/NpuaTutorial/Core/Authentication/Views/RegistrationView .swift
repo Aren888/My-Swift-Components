@@ -14,7 +14,6 @@ struct RegistrationView: View {
     
     var body: some View {
         VStack {
-            
             Spacer()
             
             Image("threads-app-icon")
@@ -73,8 +72,6 @@ struct RegistrationView: View {
     }
 }
 
-#if DEBUG
 #Preview {
     RegistrationView()
 }
-#endif

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NpuaTabView: View {
+struct ThreadsTabView: View {
     @State private var selectedTab = 0
     @State private var showCreateThreadView = false
     
@@ -64,8 +64,6 @@ struct NpuaTabView: View {
     }
 }
 
-#if DEBUG
 #Preview {
-    NpuaTabView()
+    ThreadsTabView()
 }
-#endif

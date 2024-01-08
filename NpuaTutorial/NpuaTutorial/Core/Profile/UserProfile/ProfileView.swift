@@ -2,24 +2,22 @@
 //  ProfileView.swift
 //  NpuaTutorial
 //
-//  Created by Solicy Ios on 01.12.23.
+//  Created by Solicy Ios on 08.01.24.
 //
 
 import SwiftUI
 
 struct ProfileView: View {
-    
     let user: User
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            // Bio and stats
             VStack(spacing: 20) {
                 
                 ProfileHeaderView(user: user)
                 
                 Button {
-                    // Add action for the "Follow" button
+                    
                 } label: {
                     Text("Follow")
                         .font(.subheadline)
@@ -30,10 +28,7 @@ struct ProfileView: View {
                         .cornerRadius(8)
                 }
                 
-                // User content list view
-                
-                UserContentListView()
-                
+                UserContentListView(user: user)
             }
         }
         .navigationBarTitleDisplayMode(.inline)

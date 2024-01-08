@@ -2,7 +2,7 @@
 //  CurrentUserProfileView.swift
 //  NpuaTutorial
 //
-//  Created by Solicy Ios on 13.12.23.
+//  Created by Solicy Ios on 08.01.24.
 //
 
 import SwiftUI
@@ -11,6 +11,7 @@ struct CurrentUserProfileView: View {
     
     @StateObject var viewModel = CurrentUserProfileViewModel()
     @State private var showEditProfile = false
+
     private var currentUser: User? {
         return viewModel.currentUser
     }
@@ -18,14 +19,11 @@ struct CurrentUserProfileView: View {
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
-                // Bio and stats
                 VStack(spacing: 20) {
                     
                     ProfileHeaderView(user: currentUser)
-                    
-                    
                     Button {
-                        showEditProfile.toggle() 
+                        showEditProfile.toggle()
                     } label: {
                         Text("Edit Profile")
                             .font(.subheadline)
@@ -39,13 +37,15 @@ struct CurrentUserProfileView: View {
                                     .stroke(Color(.systemGray4), lineWidth: 1)
                             }
                     }
-                    // User content list view
-                    UserContentListView()
+                    if let user = currentUser {
+                        UserContentListView(user: user)
+                    }
                 }
             }
             .sheet(isPresented: $showEditProfile, content: {
-                EditProfileView()
-                    .environmentObject(viewModel)
+                if let user = currentUser {
+                    EditProfileView(user: user)
+                }
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -53,6 +53,7 @@ struct CurrentUserProfileView: View {
                         AuthService.shared.signOut()
                     } label: {
                         Image(systemName: "line.3.horizontal")
+                            .tint(.black)
                     }
                 }
             }

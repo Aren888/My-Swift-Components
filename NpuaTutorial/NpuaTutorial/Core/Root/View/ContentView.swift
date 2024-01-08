@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         Group {
             if viewModel.userSession != nil {
-                NpuaTabView()
+                ThreadsTabView()
             } else {
                 LoginView()
             }
@@ -25,5 +25,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
-
