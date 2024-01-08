@@ -29,7 +29,6 @@ struct LoginView: View {
                 
                 SecureField("Enter your password", text: $viewModel.password)
                     .modifier(TextFieldsModifier())
-                
             }
             
             NavigationLink {

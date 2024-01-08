@@ -11,7 +11,7 @@ struct CurrentUserProfileView: View {
     
     @StateObject var viewModel = CurrentUserProfileViewModel()
     @State private var showEditProfile = false
-    
+
     private var currentUser: User? {
         return viewModel.currentUser
     }
@@ -22,7 +22,6 @@ struct CurrentUserProfileView: View {
                 VStack(spacing: 20) {
                     
                     ProfileHeaderView(user: currentUser)
-                    
                     Button {
                         showEditProfile.toggle()
                     } label: {

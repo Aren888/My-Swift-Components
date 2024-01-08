@@ -14,8 +14,7 @@ struct UserCell: View {
     var body: some View {
         HStack {
             CircularProfileImageView(user: user, size: .small)
-            
-            VStack(alignment: .leading) {
+                        VStack(alignment: .leading) {
                 Text(user.userName)
                     .fontWeight(.semibold)
                 
@@ -37,6 +36,7 @@ struct UserCell: View {
         .padding(.horizontal)
     }
 }
+
 
 struct UserCell_Previews: PreviewProvider {
     static var previews: some View {
