@@ -1,5 +1,5 @@
 //
-//  FeedView.swift
+//  ChatAuditoriaView.swift
 //  NpuaTutorial
 //
 //  Created by Solicy Ios on 01.12.23.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct FeedView: View {
-    @StateObject var viewModel = FeedViewModel()
+struct ChatAuditoriaView: View {
+    @StateObject var viewModel = ChatAuditoriaViewModel()
     
     var body: some View {
         NavigationStack {
@@ -40,6 +40,6 @@ struct FeedView: View {
 
 #Preview {
     NavigationStack {
-        FeedView()
+        ChatAuditoriaView()
     }
 }

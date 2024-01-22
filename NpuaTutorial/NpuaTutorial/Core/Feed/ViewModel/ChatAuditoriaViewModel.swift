@@ -1,5 +1,5 @@
 //
-//  FeedViewModel.swift
+//  ChatAuditoriaViewModel.swift
 //  NpuaTutorial
 //
 //  Created by Solicy Ios on 08.01.24.
@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-class FeedViewModel: ObservableObject {
+class ChatAuditoriaViewModel: ObservableObject {
     @Published var threads = [Thread]()
     
     init() {

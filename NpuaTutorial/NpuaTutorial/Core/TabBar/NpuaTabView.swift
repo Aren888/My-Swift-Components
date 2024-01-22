@@ -13,7 +13,7 @@ struct ThreadsTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            FeedView()
+            HomeView()
                 .tabItem {
                     Image(systemName: selectedTab == 0 ? "house.fill" : "house")
                         .environment(\.symbolVariants, selectedTab == 0 ? .fill : .none)
@@ -35,9 +35,9 @@ struct ThreadsTabView: View {
                 .onAppear { selectedTab = 2 }
                 .tag(2)
             
-            ActivityView()
+            ChatAuditoriaView()
                 .tabItem {
-                    Image(systemName: selectedTab == 3 ? "heart.fill" : "heart")
+                    Image(systemName: selectedTab == 3 ? "message.fill" : "message")
                         .environment(\.symbolVariants, selectedTab == 3 ? .fill : .none)
                 }
                 .onAppear { selectedTab = 3 }

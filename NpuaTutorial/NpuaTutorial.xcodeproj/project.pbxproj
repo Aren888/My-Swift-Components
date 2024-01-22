@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B03BB962B5EC28C00A165FB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB952B5EC28C00A165FB /* HomeView.swift */; };
+		8B03BB982B5EC29300A165FB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB972B5EC29300A165FB /* HomeViewModel.swift */; };
+		8B03BB9A2B5ECF6D00A165FB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB992B5ECF6D00A165FB /* ColorExtension.swift */; };
 		8B50C2B32B1919EC00E5AD98 /* NpuaTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2B22B1919EC00E5AD98 /* NpuaTutorialApp.swift */; };
 		8B50C2B52B1919EC00E5AD98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2B42B1919EC00E5AD98 /* ContentView.swift */; };
 		8B50C2B72B1919ED00E5AD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50C2B62B1919ED00E5AD98 /* Assets.xcassets */; };
@@ -15,7 +18,7 @@
 		8B50C2D32B19201E00E5AD98 /* RegistrationView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2D22B19201E00E5AD98 /* RegistrationView .swift */; };
 		8B50C2D62B19226700E5AD98 /* TextFieldsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2D52B19226700E5AD98 /* TextFieldsModifier.swift */; };
 		8B50C2D92B1927B600E5AD98 /* NpuaTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2D82B1927B600E5AD98 /* NpuaTabView.swift */; };
-		8B50C2DD2B1A54E500E5AD98 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2DC2B1A54E500E5AD98 /* FeedView.swift */; };
+		8B50C2DD2B1A54E500E5AD98 /* ChatAuditoriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2DC2B1A54E500E5AD98 /* ChatAuditoriaView.swift */; };
 		8B50C2E12B1A553B00E5AD98 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2E02B1A553B00E5AD98 /* ExploreView.swift */; };
 		8B50C2E52B1A55AD00E5AD98 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2E42B1A55AD00E5AD98 /* CreateThreadView.swift */; };
 		8B50C2E92B1A55F300E5AD98 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2E82B1A55F300E5AD98 /* ActivityView.swift */; };
@@ -62,7 +65,7 @@
 		8BCBA7392B4C085D001BBC28 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA7382B4C085D001BBC28 /* LoginViewModel.swift */; };
 		8BCBA73B2B4C0898001BBC28 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA73A2B4C0898001BBC28 /* ThreadCell.swift */; };
 		8BCBA73E2B4C08B8001BBC28 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA73D2B4C08B8001BBC28 /* ExploreViewModel.swift */; };
-		8BCBA7412B4C08E7001BBC28 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA7402B4C08E7001BBC28 /* FeedViewModel.swift */; };
+		8BCBA7412B4C08E7001BBC28 /* ChatAuditoriaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA7402B4C08E7001BBC28 /* ChatAuditoriaViewModel.swift */; };
 		8BCBA7442B4C0946001BBC28 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA7432B4C0946001BBC28 /* EditProfileViewModel.swift */; };
 		8BCBA7472B4C097A001BBC28 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA7462B4C097A001BBC28 /* ProfileView.swift */; };
 		8BCBA74C2B4C09AE001BBC28 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA74B2B4C09AE001BBC28 /* CurrentUserProfileView.swift */; };
@@ -86,6 +89,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B03BB952B5EC28C00A165FB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8B03BB972B5EC29300A165FB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8B03BB992B5ECF6D00A165FB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		8B50C2AF2B1919EC00E5AD98 /* NpuaTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NpuaTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B50C2B22B1919EC00E5AD98 /* NpuaTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NpuaTutorialApp.swift; sourceTree = "<group>"; };
 		8B50C2B42B1919EC00E5AD98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,7 +101,7 @@
 		8B50C2D22B19201E00E5AD98 /* RegistrationView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationView .swift"; sourceTree = "<group>"; };
 		8B50C2D52B19226700E5AD98 /* TextFieldsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsModifier.swift; sourceTree = "<group>"; };
 		8B50C2D82B1927B600E5AD98 /* NpuaTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NpuaTabView.swift; sourceTree = "<group>"; };
-		8B50C2DC2B1A54E500E5AD98 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		8B50C2DC2B1A54E500E5AD98 /* ChatAuditoriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAuditoriaView.swift; sourceTree = "<group>"; };
 		8B50C2E02B1A553B00E5AD98 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		8B50C2E42B1A55AD00E5AD98 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
 		8B50C2E82B1A55F300E5AD98 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
@@ -110,7 +116,7 @@
 		8BCBA7382B4C085D001BBC28 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8BCBA73A2B4C0898001BBC28 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 		8BCBA73D2B4C08B8001BBC28 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
-		8BCBA7402B4C08E7001BBC28 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		8BCBA7402B4C08E7001BBC28 /* ChatAuditoriaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAuditoriaViewModel.swift; sourceTree = "<group>"; };
 		8BCBA7432B4C0946001BBC28 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		8BCBA7462B4C097A001BBC28 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8BCBA74B2B4C09AE001BBC28 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
@@ -176,6 +182,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B03BB922B5EC26900A165FB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8B03BB932B5EC27300A165FB /* View */,
+				8B03BB942B5EC27500A165FB /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8B03BB932B5EC27300A165FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B03BB952B5EC28C00A165FB /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B03BB942B5EC27500A165FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B03BB972B5EC29300A165FB /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8B50C2A62B1919EC00E5AD98 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +262,7 @@
 				8B50C2E62B1A55E900E5AD98 /* Activity */,
 				8B50C2CD2B191AC300E5AD98 /* Authentication */,
 				8BE5603A2B210C1F00B28B9A /* Components */,
+				8B03BB922B5EC26900A165FB /* Home */,
 				8B50C2DE2B1A551E00E5AD98 /* Explore */,
 				8B50C2DA2B1A54D100E5AD98 /* Feed */,
 				8B50C2EA2B1A561200E5AD98 /* Profile */,
@@ -246,6 +278,7 @@
 			children = (
 				8BCBA7602B4C0ABB001BBC28 /* PreviewProvider.swift */,
 				8BCBA7622B4C0AC9001BBC28 /* Timestamp.swift */,
+				8B03BB992B5ECF6D00A165FB /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,7 +367,7 @@
 		8B50C2DB2B1A54D900E5AD98 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8B50C2DC2B1A54E500E5AD98 /* FeedView.swift */,
+				8B50C2DC2B1A54E500E5AD98 /* ChatAuditoriaView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,7 +505,7 @@
 		8BCBA73F2B4C08DB001BBC28 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8BCBA7402B4C08E7001BBC28 /* FeedViewModel.swift */,
+				8BCBA7402B4C08E7001BBC28 /* ChatAuditoriaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -698,7 +731,7 @@
 			files = (
 				8B6F613F2B22658D00E7F268 /* EditProfileView.swift in Sources */,
 				8B6F617C2B236B2A00E7F268 /* RegistrationViewModel.swift in Sources */,
-				8B50C2DD2B1A54E500E5AD98 /* FeedView.swift in Sources */,
+				8B50C2DD2B1A54E500E5AD98 /* ChatAuditoriaView.swift in Sources */,
 				8B6F617E2B236D9800E7F268 /* AuthService.swift in Sources */,
 				8BCBA7652B4C0ADB001BBC28 /* User.swift in Sources */,
 				8B50C2D32B19201E00E5AD98 /* RegistrationView .swift in Sources */,
@@ -708,6 +741,7 @@
 				8B94BB772B4C3A170026FA3C /* CustomIndicatorView.swift in Sources */,
 				8B50C2D62B19226700E5AD98 /* TextFieldsModifier.swift in Sources */,
 				8B94BB6F2B4C349A0026FA3C /* PageIntro.swift in Sources */,
+				8B03BB962B5EC28C00A165FB /* HomeView.swift in Sources */,
 				8BCBA73E2B4C08B8001BBC28 /* ExploreViewModel.swift in Sources */,
 				8BCBA73B2B4C0898001BBC28 /* ThreadCell.swift in Sources */,
 				8BCBA74C2B4C09AE001BBC28 /* CurrentUserProfileView.swift in Sources */,
@@ -722,16 +756,18 @@
 				8B50C2E52B1A55AD00E5AD98 /* CreateThreadView.swift in Sources */,
 				8BE560412B21116A00B28B9A /* ProfileThreadFilter.swift in Sources */,
 				8B50C2D12B191B1E00E5AD98 /* LoginView.swift in Sources */,
+				8B03BB9A2B5ECF6D00A165FB /* ColorExtension.swift in Sources */,
 				8B50C2B52B1919EC00E5AD98 /* ContentView.swift in Sources */,
 				8BCBA76D2B4C0B20001BBC28 /* ThreadService.swift in Sources */,
 				8BCBA7612B4C0ABB001BBC28 /* PreviewProvider.swift in Sources */,
-				8BCBA7412B4C08E7001BBC28 /* FeedViewModel.swift in Sources */,
+				8BCBA7412B4C08E7001BBC28 /* ChatAuditoriaViewModel.swift in Sources */,
 				8BCBA7632B4C0AC9001BBC28 /* Timestamp.swift in Sources */,
 				8B50C2D92B1927B600E5AD98 /* NpuaTabView.swift in Sources */,
 				8B50C2E12B1A553B00E5AD98 /* ExploreView.swift in Sources */,
 				8BCBA7442B4C0946001BBC28 /* EditProfileViewModel.swift in Sources */,
 				8BCBA7392B4C085D001BBC28 /* LoginViewModel.swift in Sources */,
 				8BCBA75E2B4C0A98001BBC28 /* CreateThreadViewModel.swift in Sources */,
+				8B03BB982B5EC29300A165FB /* HomeViewModel.swift in Sources */,
 				8BCBA75B2B4C0A6B001BBC28 /* ContentViewModel.swift in Sources */,
 				8BCBA7472B4C097A001BBC28 /* ProfileView.swift in Sources */,
 				8B50C2B32B1919EC00E5AD98 /* NpuaTutorialApp.swift in Sources */,
