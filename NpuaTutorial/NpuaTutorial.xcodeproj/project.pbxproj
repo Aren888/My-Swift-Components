@@ -58,6 +58,10 @@
 		8B6F61842B23772200E7F268 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6F61832B23772200E7F268 /* FirebaseAnalyticsSwift */; };
 		8B6F61862B23772200E7F268 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6F61852B23772200E7F268 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		8B6F61882B23772200E7F268 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6F61872B23772200E7F268 /* FirebaseAppCheck */; };
+		8B795D6A2B698D3D006E201C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D692B698D3D006E201C /* CircleView.swift */; };
+		8B795D6C2B698D83006E201C /* HomeBackgroundCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6B2B698D83006E201C /* HomeBackgroundCirclesView.swift */; };
+		8B795D6E2B698DD1006E201C /* HomeGlassMorphismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */; };
+		8B795D702B698EAC006E201C /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6F2B698EAC006E201C /* CustomBlurView.swift */; };
 		8B94BB6F2B4C349A0026FA3C /* PageIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B94BB6E2B4C349A0026FA3C /* PageIntro.swift */; };
 		8B94BB712B4C35350026FA3C /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B94BB702B4C35350026FA3C /* IntroView.swift */; };
 		8B94BB752B4C37800026FA3C /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B94BB742B4C37800026FA3C /* IntroViewModel.swift */; };
@@ -109,6 +113,10 @@
 		8B6F61402B226F1200E7F268 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B6F617B2B236B2A00E7F268 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		8B6F617D2B236D9800E7F268 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8B795D692B698D3D006E201C /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		8B795D6B2B698D83006E201C /* HomeBackgroundCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackgroundCirclesView.swift; sourceTree = "<group>"; };
+		8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGlassMorphismView.swift; sourceTree = "<group>"; };
+		8B795D6F2B698EAC006E201C /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
 		8B94BB6E2B4C349A0026FA3C /* PageIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIntro.swift; sourceTree = "<group>"; };
 		8B94BB702B4C35350026FA3C /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		8B94BB742B4C37800026FA3C /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
@@ -195,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				8B03BB952B5EC28C00A165FB /* HomeView.swift */,
+				8B795D682B698D09006E201C /* Home Background */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,6 +477,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		8B795D682B698D09006E201C /* Home Background */ = {
+			isa = PBXGroup;
+			children = (
+				8B795D6B2B698D83006E201C /* HomeBackgroundCirclesView.swift */,
+				8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */,
+			);
+			path = "Home Background";
+			sourceTree = "<group>";
+		};
 		8B94BB6A2B4C34690026FA3C /* Intro */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,6 +625,8 @@
 				8BE5603B2B210C4B00B28B9A /* CircularProfileImageView.swift */,
 				8BE5603D2B210CE300B28B9A /* UserCell.swift */,
 				8BCBA73A2B4C0898001BBC28 /* ThreadCell.swift */,
+				8B795D692B698D3D006E201C /* CircleView.swift */,
+				8B795D6F2B698EAC006E201C /* CustomBlurView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -729,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B795D6E2B698DD1006E201C /* HomeGlassMorphismView.swift in Sources */,
 				8B6F613F2B22658D00E7F268 /* EditProfileView.swift in Sources */,
 				8B6F617C2B236B2A00E7F268 /* RegistrationViewModel.swift in Sources */,
 				8B50C2DD2B1A54E500E5AD98 /* ChatAuditoriaView.swift in Sources */,
@@ -764,9 +785,12 @@
 				8BCBA7632B4C0AC9001BBC28 /* Timestamp.swift in Sources */,
 				8B50C2D92B1927B600E5AD98 /* NpuaTabView.swift in Sources */,
 				8B50C2E12B1A553B00E5AD98 /* ExploreView.swift in Sources */,
+				8B795D6A2B698D3D006E201C /* CircleView.swift in Sources */,
 				8BCBA7442B4C0946001BBC28 /* EditProfileViewModel.swift in Sources */,
 				8BCBA7392B4C085D001BBC28 /* LoginViewModel.swift in Sources */,
 				8BCBA75E2B4C0A98001BBC28 /* CreateThreadViewModel.swift in Sources */,
+				8B795D6C2B698D83006E201C /* HomeBackgroundCirclesView.swift in Sources */,
+				8B795D702B698EAC006E201C /* CustomBlurView.swift in Sources */,
 				8B03BB982B5EC29300A165FB /* HomeViewModel.swift in Sources */,
 				8BCBA75B2B4C0A6B001BBC28 /* ContentViewModel.swift in Sources */,
 				8BCBA7472B4C097A001BBC28 /* ProfileView.swift in Sources */,
