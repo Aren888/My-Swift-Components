@@ -50,8 +50,6 @@ struct HomeGlassMorphismView: View {
                     ], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 2
                 )
         }
-        .shadow(color: .black.opacity(0.25), radius: 15, x: -15, y: 15)
-        .shadow(color: .black.opacity(0.25), radius: 15, x: 15, y: -15)
     }
 }
 

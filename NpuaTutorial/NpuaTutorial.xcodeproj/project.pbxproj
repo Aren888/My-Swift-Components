@@ -71,6 +71,7 @@
 		8B795D6C2B698D83006E201C /* HomeBackgroundCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6B2B698D83006E201C /* HomeBackgroundCirclesView.swift */; };
 		8B795D6E2B698DD1006E201C /* HomeGlassMorphismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */; };
 		8B795D702B698EAC006E201C /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6F2B698EAC006E201C /* CustomBlurView.swift */; };
+		8B7A3A052B87B771006AA558 /* TodoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A3A042B87B771006AA558 /* TodoButton.swift */; };
 		8B9186A62B73E9F50069049A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186A52B73E9F50069049A /* Todo.swift */; };
 		8B9186A92B73ECA80069049A /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186A82B73ECA80069049A /* TodoView.swift */; };
 		8B9186AB2B7419DC0069049A /*  ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186AA2B7419DC0069049A /*  ViewExtension.swift */; };
@@ -166,6 +167,7 @@
 		8B795D6B2B698D83006E201C /* HomeBackgroundCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackgroundCirclesView.swift; sourceTree = "<group>"; };
 		8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGlassMorphismView.swift; sourceTree = "<group>"; };
 		8B795D6F2B698EAC006E201C /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
+		8B7A3A042B87B771006AA558 /* TodoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoButton.swift; sourceTree = "<group>"; };
 		8B9186A52B73E9F50069049A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		8B9186A82B73ECA80069049A /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		8B9186AA2B7419DC0069049A /*  ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ViewExtension.swift"; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				8B03BB952B5EC28C00A165FB /* HomeView.swift */,
+				8B7A3A042B87B771006AA558 /* TodoButton.swift */,
 				8B795D682B698D09006E201C /* Home Background */,
 			);
 			path = View;
@@ -948,6 +951,7 @@
 				8B03BB982B5EC29300A165FB /* HomeViewModel.swift in Sources */,
 				8B9186A62B73E9F50069049A /* Todo.swift in Sources */,
 				8BCBA75B2B4C0A6B001BBC28 /* ContentViewModel.swift in Sources */,
+				8B7A3A052B87B771006AA558 /* TodoButton.swift in Sources */,
 				8BCBA7472B4C097A001BBC28 /* ProfileView.swift in Sources */,
 				8B50C2B32B1919EC00E5AD98 /* NpuaTutorialApp.swift in Sources */,
 				8BCBA7572B4C0A07001BBC28 /* UserContentListViewModel.swift in Sources */,

@@ -14,52 +14,23 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            
             ZStack {
                 HomeBackgroundCirclesView()
-                
                 VStack {
-                    HomeGlassMorphismView(
-                        viewModel: viewModel,
-                        blurView: blurView
-                    )
-                    Spacer()
-                }
-                .commonStyle(viewModel: viewModel)
-                VStack {
-                    HStack(spacing: 0) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: viewModel.cornerRadius, style: .continuous)
-                                .fill(
-                                    .linearGradient(colors: [
-                                        .white.opacity(0.25),
-                                        .white.opacity(0.25)
-                                    ], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                )
-                                .blur(radius: 5)
+                    ScrollView(showsIndicators: false) {
+                        ForEach(viewModel.indexSections, id: \.self) { value in
                             
-                            RoundedRectangle(cornerRadius: viewModel.cornerRadius, style: .continuous)
-                                .stroke(
-                                    .linearGradient(colors: [
-                                        .white.opacity(1),
-                                        .clear,
-                                        .purple.opacity(0.5),
-                                        .purple.opacity(1)
-                                    ], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 5
-                                )
-                            
-                            NavigationLink("Show Detail View", destination: TodoView())
-                                .font(.system(size: 16, weight: .bold, design: .monospaced))
-                                .tint(.black)
+                            if value == 1 {
+                                TodoButton(blurView: $blurView, cornerRadius: $viewModel.cornerRadius, viewModel: Binding.constant(viewModel))
+                            } else {
+                                HomeGlassMorphismView(viewModel: viewModel, blurView: blurView)
+                                    .frame(maxWidth: .infinity, minHeight: UIScreen.main.bounds.height / 8, maxHeight: .infinity)
+                            }
                         }
-                        .frame(width: 200, height: 100)
-                        .foregroundStyle(.black.gradient)
-                        .background(.purple.opacity(0.1))
-                        .cornerRadius(25)
-                        .padding()
-                        
-                        Spacer()
                     }
+                    .clipShape(RoundedRectangle(cornerRadius: viewModel.cornerRadius, style: .continuous))
+                    .shadow(color: .black.opacity(0.25), radius: 15, x: -15, y: 15)
+                    .shadow(color: .black.opacity(0.25), radius: 15, x: 15, y: -15)
                     Spacer()
                 }
                 .commonStyle(viewModel: viewModel)

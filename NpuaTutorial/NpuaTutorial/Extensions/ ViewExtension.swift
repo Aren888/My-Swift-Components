@@ -13,6 +13,6 @@ extension View {
         self
             .padding(.horizontal, viewModel.horizontalPadding)
             .padding(.top, viewModel.topPadding)
-            .frame(height: viewModel.screenHeight)
+            .padding(.bottom, viewModel.bottomPadding)
     }
 }
