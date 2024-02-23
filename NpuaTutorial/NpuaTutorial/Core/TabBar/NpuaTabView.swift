@@ -56,7 +56,7 @@ struct ThreadsTabView: View {
             
         })
         .sheet(isPresented: $showCreateThreadView, onDismiss:  {
-            selectedTab = 0
+            selectedTab = 3
         }, content: {
             CreateThreadView()
         })

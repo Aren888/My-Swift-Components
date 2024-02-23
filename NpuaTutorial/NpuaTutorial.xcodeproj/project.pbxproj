@@ -72,6 +72,7 @@
 		8B795D6E2B698DD1006E201C /* HomeGlassMorphismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */; };
 		8B795D702B698EAC006E201C /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6F2B698EAC006E201C /* CustomBlurView.swift */; };
 		8B7A3A052B87B771006AA558 /* TodoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A3A042B87B771006AA558 /* TodoButton.swift */; };
+		8B7A3A072B87CF73006AA558 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A3A062B87CF73006AA558 /* LoadingView.swift */; };
 		8B9186A62B73E9F50069049A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186A52B73E9F50069049A /* Todo.swift */; };
 		8B9186A92B73ECA80069049A /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186A82B73ECA80069049A /* TodoView.swift */; };
 		8B9186AB2B7419DC0069049A /*  ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186AA2B7419DC0069049A /*  ViewExtension.swift */; };
@@ -168,6 +169,7 @@
 		8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGlassMorphismView.swift; sourceTree = "<group>"; };
 		8B795D6F2B698EAC006E201C /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
 		8B7A3A042B87B771006AA558 /* TodoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoButton.swift; sourceTree = "<group>"; };
+		8B7A3A062B87CF73006AA558 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8B9186A52B73E9F50069049A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		8B9186A82B73ECA80069049A /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		8B9186AA2B7419DC0069049A /*  ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ViewExtension.swift"; sourceTree = "<group>"; };
@@ -749,6 +751,7 @@
 				8BCBA73A2B4C0898001BBC28 /* ThreadCell.swift */,
 				8B795D692B698D3D006E201C /* CircleView.swift */,
 				8B795D6F2B698EAC006E201C /* CustomBlurView.swift */,
+				8B7A3A062B87CF73006AA558 /* LoadingView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -937,6 +940,7 @@
 				8B03BB9A2B5ECF6D00A165FB /* ColorExtension.swift in Sources */,
 				8B50C2B52B1919EC00E5AD98 /* ContentView.swift in Sources */,
 				8BCBA76D2B4C0B20001BBC28 /* ThreadService.swift in Sources */,
+				8B7A3A072B87CF73006AA558 /* LoadingView.swift in Sources */,
 				8BCBA7612B4C0ABB001BBC28 /* PreviewProvider.swift in Sources */,
 				8BCBA7412B4C08E7001BBC28 /* ChatAuditoriaViewModel.swift in Sources */,
 				8BCBA7632B4C0AC9001BBC28 /* Timestamp.swift in Sources */,
@@ -1175,7 +1179,7 @@
 				INFOPLIST_FILE = TodoList/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TodoList;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1204,7 +1208,7 @@
 				INFOPLIST_FILE = TodoList/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TodoList;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

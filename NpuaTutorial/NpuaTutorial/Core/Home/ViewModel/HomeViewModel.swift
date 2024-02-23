@@ -18,6 +18,7 @@ class HomeViewModel: ObservableObject {
     @Published var screenHeight: CGFloat
     @Published var horizontalPadding: CGFloat
     @Published var cornerRadius: CGFloat
+    @Published var isPresentingTodoView: Bool
     
     @Published var indexSections: [Int]
     
@@ -26,6 +27,7 @@ class HomeViewModel: ObservableObject {
         self.defaultSaturationAmount = 0
         self.activateGlassMorphism = false
         self.isViewDisplayed = false
+        self.isPresentingTodoView = false
         self.topPadding = UIScreen.main.bounds.height / 12
         self.bottomPadding = UIScreen.main.bounds.height / 8
         self.screenHeight = UIScreen.main.bounds.height

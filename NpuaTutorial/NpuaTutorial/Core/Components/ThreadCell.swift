@@ -12,22 +12,38 @@ struct ThreadCell: View {
     let thread: Thread
     
     var body: some View {
-        VStack {
-            HStack(alignment: .top, spacing: 12) {
+        VStack(alignment: .center) {
+            
+            HStack(alignment: .center) {
                 
                 CircularProfileImageView(user: thread.user, size: .small)
                 
-                VStack(alignment: .leading, spacing: 4) {
-                    HStack {
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(spacing: 0) {
                         
-                        Text(thread.user?.userName ?? "")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
-                        Spacer()
+                        if let userName = thread.user?.userName {
+                            Text(userName)
+                                .font(.footnote)
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(height: 14)
+                            
+                        } else {
+                            LoadingView()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(width: 60, height: 14)
+                                .padding(.trailing, 80)
+                            
+                                .cornerRadius(9)
+                            
+                        }
                         
                         Text(thread.timestamp.timestampString())
                             .font(.caption)
                             .foregroundStyle(Color(.systemGray3))
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .frame(height: 14)
+                            .padding(.trailing, 10)
                         
                         Button(action: {
                             
@@ -36,11 +52,18 @@ struct ThreadCell: View {
                                 .foregroundStyle(Color(.darkGray))
                         }
                     }
-                    
-                    Text(thread.caption)
-                        .font(.footnote)
-                        .multilineTextAlignment(.leading)
-                    
+                    if (thread.user?.userName) != nil {
+                        Text(thread.caption)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .frame(height: 14)
+                    } else {
+                        LoadingView()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .frame(width: 80, height: 14)
+                            .cornerRadius(9)
+                    }
                     HStack(spacing: 16) {
                         Button(action: {
                             
@@ -67,10 +90,11 @@ struct ThreadCell: View {
                         }
                     }
                     .foregroundStyle(.black)
-                    .padding(.vertical, 8)
                 }
             }
             .padding()
+            .frame(height: 70)
+
             Divider()
         }
     }
