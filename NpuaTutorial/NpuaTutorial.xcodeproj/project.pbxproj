@@ -31,6 +31,9 @@
 		8B6025622B851FC90099C960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6025612B851FC90099C960 /* Assets.xcassets */; };
 		8B6025662B851FC90099C960 /* TodoListExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8B6025522B851FC60099C960 /* TodoListExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8B60256B2B851FDF0099C960 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186A52B73E9F50069049A /* Todo.swift */; };
+		8B644CF72BA8C3E00023923E /* IntroViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B644CF62BA8C3E00023923E /* IntroViewHelper.swift */; };
+		8B644CF92BA8C59D0023923E /* SignInSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B644CF82BA8C59D0023923E /* SignInSectionView.swift */; };
+		8B644CFB2BA8C7100023923E /* GetStartedSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B644CFA2BA8C7100023923E /* GetStartedSectionView.swift */; };
 		8B6F613F2B22658D00E7F268 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F613E2B22658D00E7F268 /* EditProfileView.swift */; };
 		8B6F61412B226F1200E7F268 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B6F61402B226F1200E7F268 /* GoogleService-Info.plist */; };
 		8B6F61442B226FE300E7F268 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6F61432B226FE300E7F268 /* FirebaseAnalytics */; };
@@ -72,6 +75,9 @@
 		8B795D6E2B698DD1006E201C /* HomeGlassMorphismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */; };
 		8B795D702B698EAC006E201C /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795D6F2B698EAC006E201C /* CustomBlurView.swift */; };
 		8B7A3A052B87B771006AA558 /* TodoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A3A042B87B771006AA558 /* TodoButton.swift */; };
+		8B8550332BA7961000F7859E /* OnboardingQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8550322BA7961000F7859E /* OnboardingQuestionsView.swift */; };
+		8B8550352BA7961600F7859E /* OnboardingQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8550342BA7961600F7859E /* OnboardingQuestionsViewModel.swift */; };
+		8B8550372BA7A76400F7859E /* BarProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8550362BA7A76400F7859E /* BarProgressStyle.swift */; };
 		8B9186A62B73E9F50069049A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186A52B73E9F50069049A /* Todo.swift */; };
 		8B9186A92B73ECA80069049A /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186A82B73ECA80069049A /* TodoView.swift */; };
 		8B9186AB2B7419DC0069049A /*  ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9186AA2B7419DC0069049A /*  ViewExtension.swift */; };
@@ -79,6 +85,8 @@
 		8B94BB712B4C35350026FA3C /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B94BB702B4C35350026FA3C /* IntroView.swift */; };
 		8B94BB752B4C37800026FA3C /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B94BB742B4C37800026FA3C /* IntroViewModel.swift */; };
 		8B94BB772B4C3A170026FA3C /* CustomIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B94BB762B4C3A170026FA3C /* CustomIndicatorView.swift */; };
+		8B9D973F2BA0D2DE00168519 /* StartOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9D973E2BA0D2DE00168519 /* StartOnboardingView.swift */; };
+		8B9D97432BA0D2F300168519 /* StartOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9D97422BA0D2F300168519 /* StartOnboardingViewModel.swift */; };
 		8BA7BDAB2B83D3FB006FF28A /* CompletedTodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7BDAA2B83D3FB006FF28A /* CompletedTodoList.swift */; };
 		8BA7BDAD2B83DCAB006FF28A /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7BDAC2B83DCAB006FF28A /* TodoRowView.swift */; };
 		8BCBA7392B4C085D001BBC28 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCBA7382B4C085D001BBC28 /* LoginViewModel.swift */; };
@@ -159,6 +167,9 @@
 		8B6025632B851FC90099C960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B60256C2B8526880099C960 /* NpuaTutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NpuaTutorial.entitlements; sourceTree = "<group>"; };
 		8B60256D2B8526BF0099C960 /* TodoListExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoListExtension.entitlements; sourceTree = "<group>"; };
+		8B644CF62BA8C3E00023923E /* IntroViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewHelper.swift; sourceTree = "<group>"; };
+		8B644CF82BA8C59D0023923E /* SignInSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSectionView.swift; sourceTree = "<group>"; };
+		8B644CFA2BA8C7100023923E /* GetStartedSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedSectionView.swift; sourceTree = "<group>"; };
 		8B6F613E2B22658D00E7F268 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		8B6F61402B226F1200E7F268 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B6F617B2B236B2A00E7F268 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -168,6 +179,9 @@
 		8B795D6D2B698DD1006E201C /* HomeGlassMorphismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGlassMorphismView.swift; sourceTree = "<group>"; };
 		8B795D6F2B698EAC006E201C /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
 		8B7A3A042B87B771006AA558 /* TodoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoButton.swift; sourceTree = "<group>"; };
+		8B8550322BA7961000F7859E /* OnboardingQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionsView.swift; sourceTree = "<group>"; };
+		8B8550342BA7961600F7859E /* OnboardingQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionsViewModel.swift; sourceTree = "<group>"; };
+		8B8550362BA7A76400F7859E /* BarProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarProgressStyle.swift; sourceTree = "<group>"; };
 		8B9186A52B73E9F50069049A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		8B9186A82B73ECA80069049A /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		8B9186AA2B7419DC0069049A /*  ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ViewExtension.swift"; sourceTree = "<group>"; };
@@ -175,6 +189,8 @@
 		8B94BB702B4C35350026FA3C /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		8B94BB742B4C37800026FA3C /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		8B94BB762B4C3A170026FA3C /* CustomIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicatorView.swift; sourceTree = "<group>"; };
+		8B9D973E2BA0D2DE00168519 /* StartOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnboardingView.swift; sourceTree = "<group>"; };
+		8B9D97422BA0D2F300168519 /* StartOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewModel.swift; sourceTree = "<group>"; };
 		8BA7BDAA2B83D3FB006FF28A /* CompletedTodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTodoList.swift; sourceTree = "<group>"; };
 		8BA7BDAC2B83DCAB006FF28A /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
 		8BCBA7382B4C085D001BBC28 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -338,6 +354,7 @@
 		8B50C2C82B191A6E00E5AD98 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8B9D973D2BA0D2BB00168519 /* Onboarding */,
 				8B94BB6A2B4C34690026FA3C /* Intro */,
 				8B50C2E62B1A55E900E5AD98 /* Activity */,
 				8B50C2CD2B191AC300E5AD98 /* Authentication */,
@@ -581,6 +598,40 @@
 			path = "Home Background";
 			sourceTree = "<group>";
 		};
+		8B85502E2BA795D400F7859E /* Start Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8B9D97402BA0D2E100168519 /* View */,
+				8B9D97412BA0D2E400168519 /* ViewModel */,
+			);
+			path = "Start Onboarding";
+			sourceTree = "<group>";
+		};
+		8B85502F2BA795DD00F7859E /* Onboarding Questions */ = {
+			isa = PBXGroup;
+			children = (
+				8B8550302BA795FB00F7859E /* Veiw */,
+				8B8550312BA795FE00F7859E /* ViewModel */,
+			);
+			path = "Onboarding Questions";
+			sourceTree = "<group>";
+		};
+		8B8550302BA795FB00F7859E /* Veiw */ = {
+			isa = PBXGroup;
+			children = (
+				8B8550322BA7961000F7859E /* OnboardingQuestionsView.swift */,
+			);
+			path = Veiw;
+			sourceTree = "<group>";
+		};
+		8B8550312BA795FE00F7859E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B8550342BA7961600F7859E /* OnboardingQuestionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8B9186A32B73E9CC0069049A /* To Do */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,7 +672,10 @@
 			isa = PBXGroup;
 			children = (
 				8B94BB702B4C35350026FA3C /* IntroView.swift */,
+				8B644CF62BA8C3E00023923E /* IntroViewHelper.swift */,
 				8B94BB762B4C3A170026FA3C /* CustomIndicatorView.swift */,
+				8B644CF82BA8C59D0023923E /* SignInSectionView.swift */,
+				8B644CFA2BA8C7100023923E /* GetStartedSectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -630,6 +684,31 @@
 			isa = PBXGroup;
 			children = (
 				8B94BB742B4C37800026FA3C /* IntroViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8B9D973D2BA0D2BB00168519 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8B85502F2BA795DD00F7859E /* Onboarding Questions */,
+				8B85502E2BA795D400F7859E /* Start Onboarding */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8B9D97402BA0D2E100168519 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B9D973E2BA0D2DE00168519 /* StartOnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B9D97412BA0D2E400168519 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B9D97422BA0D2F300168519 /* StartOnboardingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -745,6 +824,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE5603B2B210C4B00B28B9A /* CircularProfileImageView.swift */,
+				8B8550362BA7A76400F7859E /* BarProgressStyle.swift */,
 				8BE5603D2B210CE300B28B9A /* UserCell.swift */,
 				8BCBA73A2B4C0898001BBC28 /* ThreadCell.swift */,
 				8B795D692B698D3D006E201C /* CircleView.swift */,
@@ -903,6 +983,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B795D6E2B698DD1006E201C /* HomeGlassMorphismView.swift in Sources */,
+				8B8550332BA7961000F7859E /* OnboardingQuestionsView.swift in Sources */,
+				8B8550372BA7A76400F7859E /* BarProgressStyle.swift in Sources */,
 				8B6F613F2B22658D00E7F268 /* EditProfileView.swift in Sources */,
 				8B6F617C2B236B2A00E7F268 /* RegistrationViewModel.swift in Sources */,
 				8B50C2DD2B1A54E500E5AD98 /* ChatAuditoriaView.swift in Sources */,
@@ -910,6 +992,7 @@
 				8BCBA7652B4C0ADB001BBC28 /* User.swift in Sources */,
 				8B50C2D32B19201E00E5AD98 /* RegistrationView .swift in Sources */,
 				8BCBA7692B4C0AFA001BBC28 /* UserService.swift in Sources */,
+				8B9D973F2BA0D2DE00168519 /* StartOnboardingView.swift in Sources */,
 				8B94BB752B4C37800026FA3C /* IntroViewModel.swift in Sources */,
 				8BCBA76B2B4C0B0E001BBC28 /* ImageUploader.swift in Sources */,
 				8B94BB772B4C3A170026FA3C /* CustomIndicatorView.swift in Sources */,
@@ -932,14 +1015,19 @@
 				8B50C2E52B1A55AD00E5AD98 /* CreateThreadView.swift in Sources */,
 				8B9186AB2B7419DC0069049A /*  ViewExtension.swift in Sources */,
 				8BE560412B21116A00B28B9A /* ProfileThreadFilter.swift in Sources */,
+				8B644CFB2BA8C7100023923E /* GetStartedSectionView.swift in Sources */,
 				8BA7BDAB2B83D3FB006FF28A /* CompletedTodoList.swift in Sources */,
 				8B50C2D12B191B1E00E5AD98 /* LoginView.swift in Sources */,
 				8B03BB9A2B5ECF6D00A165FB /* ColorExtension.swift in Sources */,
+				8B644CF72BA8C3E00023923E /* IntroViewHelper.swift in Sources */,
 				8B50C2B52B1919EC00E5AD98 /* ContentView.swift in Sources */,
 				8BCBA76D2B4C0B20001BBC28 /* ThreadService.swift in Sources */,
 				8BCBA7612B4C0ABB001BBC28 /* PreviewProvider.swift in Sources */,
+				8B9D97432BA0D2F300168519 /* StartOnboardingViewModel.swift in Sources */,
 				8BCBA7412B4C08E7001BBC28 /* ChatAuditoriaViewModel.swift in Sources */,
+				8B644CF92BA8C59D0023923E /* SignInSectionView.swift in Sources */,
 				8BCBA7632B4C0AC9001BBC28 /* Timestamp.swift in Sources */,
+				8B8550352BA7961600F7859E /* OnboardingQuestionsViewModel.swift in Sources */,
 				8B50C2D92B1927B600E5AD98 /* NpuaTabView.swift in Sources */,
 				8B50C2E12B1A553B00E5AD98 /* ExploreView.swift in Sources */,
 				8B795D6A2B698D3D006E201C /* CircleView.swift in Sources */,

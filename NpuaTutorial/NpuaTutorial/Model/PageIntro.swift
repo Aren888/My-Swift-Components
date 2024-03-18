@@ -30,7 +30,7 @@ var pageIntros: [PageIntro] = [
     
     // Onboarding page 3
     .init(introAssertImage: "Page 3",
-          title: "Let's\nGet Started",
-          subTitle: "To register for an account, kindly enter your details.",
+          title: "",
+          subTitle: "",
           displaysAction: true)
 ]
