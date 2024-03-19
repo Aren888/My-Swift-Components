@@ -24,7 +24,7 @@ struct StartOnboardingView: View {
                     .frame(maxWidth: .infinity)
                 
                 Text("Hi There! I'm Tong Ai.")
-                    .font(.system(size: 18, weight: .medium, design: .serif))
+                    .font(.system(size: 18, weight: .medium, design: .default))
                     .padding(.top)
                 
                 if isShowQuestionMessage {
@@ -34,9 +34,8 @@ struct StartOnboardingView: View {
                         .frame(maxWidth: .infinity)
                         .padding(14)
                         .background {
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.black)
-                                .shadow(radius: 10)
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.black.gradient)
                         }
                         .padding(.vertical, 15)
                 }
@@ -59,7 +58,7 @@ struct StartOnboardingView: View {
                     .frame(maxWidth: .infinity)
                     .background {
                         Capsule()
-                            .fill(Color.white)
+                            .fill(Color.white.gradient)
                             .shadow(radius: 10)
                     }
             }

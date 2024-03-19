@@ -32,7 +32,7 @@ struct SignInSectionView: View {
                 .frame(maxWidth: .infinity)
                 .background {
                     Capsule()
-                        .fill(Color.white)
+                        .fill(Color.white.gradient)
                         .shadow(radius: 10)
                 }
         }

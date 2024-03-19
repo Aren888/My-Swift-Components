@@ -10,6 +10,8 @@
 		8B03BB962B5EC28C00A165FB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB952B5EC28C00A165FB /* HomeView.swift */; };
 		8B03BB982B5EC29300A165FB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB972B5EC29300A165FB /* HomeViewModel.swift */; };
 		8B03BB9A2B5ECF6D00A165FB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB992B5ECF6D00A165FB /* ColorExtension.swift */; };
+		8B0C564A2BA9F7A1001F3C8A /* FirstQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C56492BA9F7A1001F3C8A /* FirstQuestionView.swift */; };
+		8B0C564C2BA9FA8A001F3C8A /* FirstQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C564B2BA9FA89001F3C8A /* FirstQuestionViewModel.swift */; };
 		8B50C2B32B1919EC00E5AD98 /* NpuaTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2B22B1919EC00E5AD98 /* NpuaTutorialApp.swift */; };
 		8B50C2B52B1919EC00E5AD98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50C2B42B1919EC00E5AD98 /* ContentView.swift */; };
 		8B50C2B72B1919ED00E5AD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50C2B62B1919ED00E5AD98 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		8B644CF72BA8C3E00023923E /* IntroViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B644CF62BA8C3E00023923E /* IntroViewHelper.swift */; };
 		8B644CF92BA8C59D0023923E /* SignInSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B644CF82BA8C59D0023923E /* SignInSectionView.swift */; };
 		8B644CFB2BA8C7100023923E /* GetStartedSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B644CFA2BA8C7100023923E /* GetStartedSectionView.swift */; };
+		8B644CFD2BA8CCE50023923E /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B644CFC2BA8CCE50023923E /* ContinueButton.swift */; };
+		8B644CFF2BA8CD110023923E /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B644CFE2BA8CD110023923E /* ProgressHeaderView.swift */; };
 		8B6F613F2B22658D00E7F268 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F613E2B22658D00E7F268 /* EditProfileView.swift */; };
 		8B6F61412B226F1200E7F268 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B6F61402B226F1200E7F268 /* GoogleService-Info.plist */; };
 		8B6F61442B226FE300E7F268 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6F61432B226FE300E7F268 /* FirebaseAnalytics */; };
@@ -143,6 +147,8 @@
 		8B03BB952B5EC28C00A165FB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8B03BB972B5EC29300A165FB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8B03BB992B5ECF6D00A165FB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		8B0C56492BA9F7A1001F3C8A /* FirstQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstQuestionView.swift; sourceTree = "<group>"; };
+		8B0C564B2BA9FA89001F3C8A /* FirstQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstQuestionViewModel.swift; sourceTree = "<group>"; };
 		8B50C2AF2B1919EC00E5AD98 /* NpuaTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NpuaTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B50C2B22B1919EC00E5AD98 /* NpuaTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NpuaTutorialApp.swift; sourceTree = "<group>"; };
 		8B50C2B42B1919EC00E5AD98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +176,8 @@
 		8B644CF62BA8C3E00023923E /* IntroViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewHelper.swift; sourceTree = "<group>"; };
 		8B644CF82BA8C59D0023923E /* SignInSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSectionView.swift; sourceTree = "<group>"; };
 		8B644CFA2BA8C7100023923E /* GetStartedSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedSectionView.swift; sourceTree = "<group>"; };
+		8B644CFC2BA8CCE50023923E /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
+		8B644CFE2BA8CD110023923E /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
 		8B6F613E2B22658D00E7F268 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		8B6F61402B226F1200E7F268 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B6F617B2B236B2A00E7F268 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -210,9 +218,9 @@
 		8BCBA7622B4C0AC9001BBC28 /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
 		8BCBA7642B4C0ADB001BBC28 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = NpuaTutorial/Extensions/User.swift; sourceTree = SOURCE_ROOT; };
 		8BCBA7662B4C0AE8001BBC28 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Thread.swift; path = NpuaTutorial/Extensions/Thread.swift; sourceTree = SOURCE_ROOT; };
-		8BCBA7682B4C0AFA001BBC28 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = NpuaTutorial/Extensions/UserService.swift; sourceTree = SOURCE_ROOT; };
-		8BCBA76A2B4C0B0E001BBC28 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageUploader.swift; path = NpuaTutorial/Extensions/ImageUploader.swift; sourceTree = SOURCE_ROOT; };
-		8BCBA76C2B4C0B20001BBC28 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThreadService.swift; path = NpuaTutorial/Extensions/ThreadService.swift; sourceTree = SOURCE_ROOT; };
+		8BCBA7682B4C0AFA001BBC28 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = "NpuaTutorial/Services/Firebase Services/UserService.swift"; sourceTree = SOURCE_ROOT; };
+		8BCBA76A2B4C0B0E001BBC28 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageUploader.swift; path = "NpuaTutorial/Services/Firebase Services/ImageUploader.swift"; sourceTree = SOURCE_ROOT; };
+		8BCBA76C2B4C0B20001BBC28 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThreadService.swift; path = NpuaTutorial/Services/ThreadService.swift; sourceTree = SOURCE_ROOT; };
 		8BE5603B2B210C4B00B28B9A /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		8BE5603D2B210CE300B28B9A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		8BE560402B21116A00B28B9A /* ProfileThreadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileThreadFilter.swift; sourceTree = "<group>"; };
@@ -354,8 +362,8 @@
 		8B50C2C82B191A6E00E5AD98 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8B9D973D2BA0D2BB00168519 /* Onboarding */,
 				8B94BB6A2B4C34690026FA3C /* Intro */,
+				8B9D973D2BA0D2BB00168519 /* Onboarding */,
 				8B50C2E62B1A55E900E5AD98 /* Activity */,
 				8B50C2CD2B191AC300E5AD98 /* Authentication */,
 				8BE5603A2B210C1F00B28B9A /* Components */,
@@ -555,6 +563,41 @@
 			path = TodoList;
 			sourceTree = "<group>";
 		};
+		8B644D002BA8CE790023923E /* Main Onboarding Questions View */ = {
+			isa = PBXGroup;
+			children = (
+				8B8550302BA795FB00F7859E /* Veiw */,
+				8B8550312BA795FE00F7859E /* ViewModel */,
+				8B85502F2BA795DD00F7859E /* Onboarding Questions */,
+			);
+			path = "Main Onboarding Questions View";
+			sourceTree = "<group>";
+		};
+		8B644D012BA8CE8F0023923E /* 1) What Would You Like To Learn? */ = {
+			isa = PBXGroup;
+			children = (
+				8B644D022BA8CED00023923E /* View */,
+				8B644D032BA8CED70023923E /* ViewModel */,
+			);
+			path = "1) What Would You Like To Learn?";
+			sourceTree = "<group>";
+		};
+		8B644D022BA8CED00023923E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C56492BA9F7A1001F3C8A /* FirstQuestionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B644D032BA8CED70023923E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C564B2BA9FA89001F3C8A /* FirstQuestionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8B6F613C2B22657C00E7F268 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,8 +653,7 @@
 		8B85502F2BA795DD00F7859E /* Onboarding Questions */ = {
 			isa = PBXGroup;
 			children = (
-				8B8550302BA795FB00F7859E /* Veiw */,
-				8B8550312BA795FE00F7859E /* ViewModel */,
+				8B644D012BA8CE8F0023923E /* 1) What Would You Like To Learn? */,
 			);
 			path = "Onboarding Questions";
 			sourceTree = "<group>";
@@ -620,6 +662,8 @@
 			isa = PBXGroup;
 			children = (
 				8B8550322BA7961000F7859E /* OnboardingQuestionsView.swift */,
+				8B644CFC2BA8CCE50023923E /* ContinueButton.swift */,
+				8B644CFE2BA8CD110023923E /* ProgressHeaderView.swift */,
 			);
 			path = Veiw;
 			sourceTree = "<group>";
@@ -691,8 +735,8 @@
 		8B9D973D2BA0D2BB00168519 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				8B85502F2BA795DD00F7859E /* Onboarding Questions */,
 				8B85502E2BA795D400F7859E /* Start Onboarding */,
+				8B644D002BA8CE790023923E /* Main Onboarding Questions View */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -1012,6 +1056,7 @@
 				8B9186A92B73ECA80069049A /* TodoView.swift in Sources */,
 				8BCBA7532B4C09EC001BBC28 /* ProfileHeaderView.swift in Sources */,
 				8BE5603E2B210CE300B28B9A /* UserCell.swift in Sources */,
+				8B644CFD2BA8CCE50023923E /* ContinueButton.swift in Sources */,
 				8B50C2E52B1A55AD00E5AD98 /* CreateThreadView.swift in Sources */,
 				8B9186AB2B7419DC0069049A /*  ViewExtension.swift in Sources */,
 				8BE560412B21116A00B28B9A /* ProfileThreadFilter.swift in Sources */,
@@ -1024,7 +1069,9 @@
 				8BCBA76D2B4C0B20001BBC28 /* ThreadService.swift in Sources */,
 				8BCBA7612B4C0ABB001BBC28 /* PreviewProvider.swift in Sources */,
 				8B9D97432BA0D2F300168519 /* StartOnboardingViewModel.swift in Sources */,
+				8B644CFF2BA8CD110023923E /* ProgressHeaderView.swift in Sources */,
 				8BCBA7412B4C08E7001BBC28 /* ChatAuditoriaViewModel.swift in Sources */,
+				8B0C564A2BA9F7A1001F3C8A /* FirstQuestionView.swift in Sources */,
 				8B644CF92BA8C59D0023923E /* SignInSectionView.swift in Sources */,
 				8BCBA7632B4C0AC9001BBC28 /* Timestamp.swift in Sources */,
 				8B8550352BA7961600F7859E /* OnboardingQuestionsViewModel.swift in Sources */,
@@ -1043,6 +1090,7 @@
 				8BCBA7472B4C097A001BBC28 /* ProfileView.swift in Sources */,
 				8B50C2B32B1919EC00E5AD98 /* NpuaTutorialApp.swift in Sources */,
 				8BCBA7572B4C0A07001BBC28 /* UserContentListViewModel.swift in Sources */,
+				8B0C564C2BA9FA8A001F3C8A /* FirstQuestionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

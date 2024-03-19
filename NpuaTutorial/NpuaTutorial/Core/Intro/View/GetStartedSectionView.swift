@@ -32,7 +32,7 @@ struct GetStartedSectionView: View {
                 .frame(maxWidth: .infinity)
                 .background {
                     Capsule()
-                        .fill(Color.black)
+                        .fill(Color.black.gradient)
                         .shadow(radius: 10)
                 }
         }

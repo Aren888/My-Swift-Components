@@ -68,7 +68,7 @@ struct IntroViewHelper<Actionview: View>: View {
                                 .padding(.vertical, 15)
                                 .background {
                                     Capsule()
-                                        .fill(.black)
+                                        .fill(.black.gradient)
                                         .shadow(radius: 10)
                                 }
                         }
