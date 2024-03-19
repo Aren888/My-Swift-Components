@@ -9,15 +9,17 @@ import SwiftUI
 
 struct FirstQuestionView: View {
     
+    @StateObject var viewModel = FirstQuestionViewModel()
+    
     var body: some View {
-        VStack(spacing: 14) {
+        VStack(spacing: 0) {
             HStack {
                 Image("ai-model-image")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
                 
-                Text("What Would You Like To Learn?")
+                Text(viewModel.question)
                     .font(.system(size: 18, weight: .regular, design: .default))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
@@ -32,17 +34,43 @@ struct FirstQuestionView: View {
             }
             
             HStack {
-                Text("For English speakers")
+                Text(viewModel.title)
                     .font(.system(size: 24, weight: .semibold, design: .default))
                     .foregroundColor(.black)
                     .padding(.horizontal)
+                    .padding(.top)
                 Spacer()
             }
             
-            ScrollView(showsIndicators: false) {
-                
+            VStack {
+                ScrollView(showsIndicators: false) {
+                    ForEach(viewModel.sections.indices, id: \.self) { index in
+                        Button {
+                            withAnimation {
+                                viewModel.selectedButtonIndex = index
+                            }
+                        } label: {
+                            HStack() {
+                                Text(viewModel.sections[index].flag)
+                                    .font(.largeTitle)
+                                Text(viewModel.sections[index].language)
+                                    .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
+                                Spacer()
+                            }
+                        }
+                        .padding(2)
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            Capsule()
+                                .fill(viewModel.selectedButtonIndex == index ? viewModel.buttonBGColor.gradient :  viewModel.buttonMessageBGColor.gradient)
+                                .shadow(radius: 10)
+                        )
+                    }
+                    .padding()
+                }
+                .padding(.vertical)
             }
-            .padding()
         }
     }
 }
