@@ -9,8 +9,7 @@ import SwiftUI
 
 struct StartOnboardingView: View {
     
-    @State private var isShowQuestionMessage: Bool = false
-    @State private var isPushQuestionsView: Bool = false
+    @StateObject private var viewModel: StartOnboardingViewModel = StartOnboardingViewModel()
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -18,17 +17,17 @@ struct StartOnboardingView: View {
             Spacer()
             VStack(spacing: 8) {
                 
-                Image("ai-model-image")
+                Image("ai-model-image-1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: .infinity)
                 
-                Text("Hi There! I'm Tong Ai.")
+                Text(viewModel.welcomeMessage)
                     .font(.system(size: 18, weight: .medium, design: .default))
                     .padding(.top)
                 
-                if isShowQuestionMessage {
-                    Text("Just 7 quick questions before we begin your first lesson.")
+                if viewModel.isShowQuestionMessage {
+                    Text(viewModel.questionMessage)
                         .font(.system(size: 16, weight: .medium, design: .serif))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
@@ -48,10 +47,10 @@ struct StartOnboardingView: View {
             
             Button {
                 withAnimation {
-                    isShowQuestionMessage.toggle()
+                    viewModel.isShowQuestionMessage.toggle()
                 }
             } label: {
-                Text("Continue")
+                Text(viewModel.continueButtonTitle)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
                     .padding(.vertical, 15)
@@ -63,9 +62,9 @@ struct StartOnboardingView: View {
                     }
             }
         }
-        .onChange(of: isShowQuestionMessage, { oldValue, newValue in
+        .onChange(of: viewModel.isShowQuestionMessage, { oldValue, newValue in
             if !newValue {
-                isPushQuestionsView = true
+                viewModel.isPushQuestionsView = true
             }
         })
         .overlay(alignment: .topLeading) {
@@ -80,7 +79,7 @@ struct StartOnboardingView: View {
             }
             .padding(12)
         }
-        .navigationDestination(isPresented: $isPushQuestionsView) {
+        .navigationDestination(isPresented: $viewModel.isPushQuestionsView) {
             OnboardingQuestionsView()
             
             Text("")

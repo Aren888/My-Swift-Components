@@ -15,7 +15,16 @@ struct OnboardingQuestionsView: View {
         VStack {
             ProgressHeaderView(viewModel: viewModel, dismissAction: dismissAction)
             
-            FirstQuestionView()
+                switch viewModel.nextViewCount {
+                case 0:
+                    FirstQuestionView()
+                case 1:
+                    SecondQuestionView()
+                case 2:
+                    ThirdQuestionView()
+                default:
+                    EmptyView()
+                }
             
             Spacer()
             ContinueButton(viewModel: viewModel)

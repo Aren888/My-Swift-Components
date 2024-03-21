@@ -64,7 +64,7 @@ struct IntroViewHelper<Actionview: View>: View {
                             Text("Next")
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.white)
-                                .frame(width: size.width * 0.4)
+                                .frame(maxWidth: .infinity)
                                 .padding(.vertical, 15)
                                 .background {
                                     Capsule()
