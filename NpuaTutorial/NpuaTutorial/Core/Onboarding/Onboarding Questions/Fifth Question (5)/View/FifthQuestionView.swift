@@ -1,20 +1,20 @@
 //
-//  ThirdQuestionView.swift
+//  FifthQuestionView.swift
 //  NpuaTutorial
 //
-//  Created by Solicy Ios on 21.03.24.
+//  Created by Solicy Ios on 07.04.24.
 //
 
 import SwiftUI
 
-struct ThirdQuestionView: View {
+struct FifthQuestionView: View {
     
-    @StateObject var viewModel = ThirdQuestionViewModel()
-    
+    @StateObject var viewModel = FifthQuestionViewModel()
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Image("ai-model-image-3")
+                Image("ai-model-image-5")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
@@ -42,12 +42,14 @@ struct ThirdQuestionView: View {
                             }
                         } label: {
                             HStack() {
-                                Image(systemName: viewModel.sections[index].1)
-                                    .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
-                                    .frame(width: 20)
                                 Text(viewModel.sections[index].0)
                                     .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
+                                
                                 Spacer()
+                                
+                                Text(viewModel.sections[index].1)
+                                    .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
+                                    .font(.system(size: 14))
                             }
                         }
                         .padding(2)

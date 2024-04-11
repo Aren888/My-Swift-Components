@@ -1,20 +1,20 @@
 //
-//  ThirdQuestionView.swift
+//  SixthQuestionView.swift
 //  NpuaTutorial
 //
-//  Created by Solicy Ios on 21.03.24.
+//  Created by Solicy Ios on 07.04.24.
 //
 
 import SwiftUI
 
-struct ThirdQuestionView: View {
+struct SixthQuestionView: View {
     
-    @StateObject var viewModel = ThirdQuestionViewModel()
+    @StateObject var viewModel = SixthQuestionViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Image("ai-model-image-3")
+                Image("ai-model-image-6")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
@@ -36,31 +36,36 @@ struct ThirdQuestionView: View {
             VStack {
                 ScrollView(showsIndicators: false) {
                     ForEach(viewModel.sections.indices, id: \.self) { index in
-                        Button {
-                            withAnimation {
-                                viewModel.selectedButtonIndex = index
-                            }
-                        } label: {
-                            HStack() {
-                                Image(systemName: viewModel.sections[index].1)
+                        
+                        HStack() {
+                            VStack {
+                                Image(systemName: viewModel.sections[index].2)
                                     .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
                                     .frame(width: 20)
+                            }
+                            .padding(4)
+                            
+                            VStack(alignment: .leading) {
                                 Text(viewModel.sections[index].0)
                                     .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
-                                Spacer()
+                                    .fontWeight(.bold)
+                                    .lineLimit(2)
+                                
+                                Text(viewModel.sections[index].1)
+                                    .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
+                                    .lineLimit(2)
                             }
+                            Spacer()
                         }
-                        .padding(2)
                         .padding(.horizontal)
-                        .frame(height: 40)
+                        .padding(.vertical, 6)
                         .frame(maxWidth: .infinity)
-                        .background(
-                            Capsule()
-                                .fill(viewModel.selectedButtonIndex == index ? viewModel.buttonBGColor.gradient :  viewModel.buttonMessageBGColor.gradient)
-                                .shadow(radius: 10)
-                        )
+                        .background(.white.gradient)
+                        .cornerRadius(16)
+                        .shadow(radius: 2)
                     }
                     .padding()
+                    
                 }
                 .padding(.vertical)
             }

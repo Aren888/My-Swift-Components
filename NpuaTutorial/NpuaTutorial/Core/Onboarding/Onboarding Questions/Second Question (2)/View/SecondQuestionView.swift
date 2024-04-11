@@ -44,6 +44,7 @@ struct SecondQuestionView: View {
                             HStack() {
                                 Image(systemName: viewModel.sections[index].1)
                                     .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
+                                    .frame(width: 20)
                                 Text(viewModel.sections[index].0)
                                     .foregroundStyle(viewModel.selectedButtonIndex == index ? viewModel.buttonMessageBGColor.gradient : viewModel.buttonBGColor.gradient)
                                 Spacer()

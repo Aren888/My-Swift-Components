@@ -1,20 +1,21 @@
 //
-//  ThirdQuestionView.swift
+//  FourthQuestionView.swift
 //  NpuaTutorial
 //
-//  Created by Solicy Ios on 21.03.24.
+//  Created by Solicy Ios on 07.04.24.
 //
 
+import Foundation
 import SwiftUI
 
-struct ThirdQuestionView: View {
+struct FourthQuestionView: View {
     
-    @StateObject var viewModel = ThirdQuestionViewModel()
+    @StateObject var viewModel = FourthQuestionViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Image("ai-model-image-3")
+                Image("ai-model-image-4")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)

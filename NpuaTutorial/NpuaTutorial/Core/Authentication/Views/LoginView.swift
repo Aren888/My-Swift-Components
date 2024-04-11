@@ -16,11 +16,27 @@ struct LoginView: View {
             
             Spacer()
             
-            Image("threads-app-icon")
+            Image("ai-model-image-1")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 120, height: 120)
+                .frame(width: 200)
                 .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.gray.gradient, lineWidth: 1)
+                        .backgroundStyle(.white)
+                        .shadow(color: .black, radius: 7, x: 0, y: 0)
+
+                )
+                .padding(.bottom)
+            
+            Text("Tong Ai")
+                .font(.system(size: 40))
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+                .padding(10)
+                .padding(.bottom)
+                .shadow(color: .gray, radius: 20, x: 0.10, y: 0.10)
             
             VStack {
                 TextField("Enter your email", text: $viewModel.email)
@@ -51,7 +67,7 @@ struct LoginView: View {
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .frame(width: 352, height: 44)
-                    .background(.black)
+                    .background(.black.gradient)
                     .cornerRadius(8)
             }
             
