@@ -26,7 +26,7 @@ struct RegistrationView: View {
                         .stroke(Color.gray.gradient, lineWidth: 1)
                         .backgroundStyle(.white)
                         .shadow(color: .black, radius: 7, x: 0, y: 0)
-
+                    
                 )
             
             Text("Tong Ai")
@@ -54,18 +54,32 @@ struct RegistrationView: View {
             }
             
             Button {
-                Task { try await viewModel.createUser() }
+                Task { viewModel.createUser() }
             } label: {
-                Text("Sign Up")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
-                    .frame(width: 352, height: 44)
-                    .background(.black.gradient)
-                    .cornerRadius(8)
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .foregroundColor(.white)
+                } else {
+                    Text("Sign Up")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 352, height: 44)
+                        .background(Color.black)
+                        .cornerRadius(8)
+                }
             }
             .padding(.vertical)
-            
+            .disabled(viewModel.isLoading)
+            .alert("Error", isPresented: Binding<Bool>(
+                get: { viewModel.errorMessage != nil },
+                set: { _ in viewModel.errorMessage = nil }
+            )) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(viewModel.errorMessage ?? "")
+            }
             Spacer()
             
             Divider()

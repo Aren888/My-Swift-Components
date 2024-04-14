@@ -10,10 +10,10 @@ import SwiftUI
 struct LoginView: View {
     
     @StateObject var viewModel = LoginViewModel()
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
-            
             Spacer()
             
             Image("ai-model-image-6")
@@ -26,7 +26,6 @@ struct LoginView: View {
                         .stroke(Color.gray.gradient, lineWidth: 1)
                         .backgroundStyle(.white)
                         .shadow(color: .black, radius: 7, x: 0, y: 0)
-
                 )
                 .padding(.bottom)
             
@@ -60,15 +59,31 @@ struct LoginView: View {
             }
             
             Button {
-                Task{ try await viewModel.login() }
+                viewModel.login()
             } label: {
-                Text("Login")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
-                    .frame(width: 352, height: 44)
-                    .background(.black.gradient)
-                    .cornerRadius(8)
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .foregroundColor(.white)
+                } else {
+                    Text("Login")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 352, height: 44)
+                        .background(.black.gradient)
+                        .cornerRadius(8)
+                }
+            }
+            .padding(.vertical)
+            .disabled(viewModel.isLoading)
+            .alert("Error", isPresented: Binding<Bool>(
+                get: { viewModel.errorMessage != nil },
+                set: { _ in viewModel.errorMessage = nil }
+            )) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(viewModel.errorMessage ?? "")
             }
             
             Spacer()

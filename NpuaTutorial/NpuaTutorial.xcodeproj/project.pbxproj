@@ -125,6 +125,8 @@
 		8BCCFC102BACB105007B9685 /* ThirdQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCFC0F2BACB105007B9685 /* ThirdQuestionView.swift */; };
 		8BCCFC122BACB10B007B9685 /* ThirdQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCFC112BACB10B007B9685 /* ThirdQuestionViewModel.swift */; };
 		8BE556E52BCBCE4500133399 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE556E42BCBCE4500133399 /* LoadingView.swift */; };
+		8BE556E72BCBD81600133399 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE556E62BCBD81600133399 /* StringExtension.swift */; };
+		8BE556EA2BCBE13A00133399 /* AuthServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE556E92BCBE13A00133399 /* AuthServiceModel.swift */; };
 		8BE5603C2B210C4B00B28B9A /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5603B2B210C4B00B28B9A /* CircularProfileImageView.swift */; };
 		8BE5603E2B210CE300B28B9A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5603D2B210CE300B28B9A /* UserCell.swift */; };
 		8BE560412B21116A00B28B9A /* ProfileThreadFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE560402B21116A00B28B9A /* ProfileThreadFilter.swift */; };
@@ -245,6 +247,8 @@
 		8BCCFC0F2BACB105007B9685 /* ThirdQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdQuestionView.swift; sourceTree = "<group>"; };
 		8BCCFC112BACB10B007B9685 /* ThirdQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdQuestionViewModel.swift; sourceTree = "<group>"; };
 		8BE556E42BCBCE4500133399 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		8BE556E62BCBD81600133399 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		8BE556E92BCBE13A00133399 /* AuthServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceModel.swift; sourceTree = "<group>"; };
 		8BE5603B2B210C4B00B28B9A /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		8BE5603D2B210CE300B28B9A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		8BE560402B21116A00B28B9A /* ProfileThreadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileThreadFilter.swift; sourceTree = "<group>"; };
@@ -470,6 +474,7 @@
 				8BCBA7622B4C0AC9001BBC28 /* Timestamp.swift */,
 				8B03BB992B5ECF6D00A165FB /* ColorExtension.swift */,
 				8B9186AA2B7419DC0069049A /*  ViewExtension.swift */,
+				8BE556E62BCBD81600133399 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 				8B6F617A2B236AD200E7F268 /* Service */,
 				8B50C2CF2B191B1000E5AD98 /* Views */,
 				8B6F61792B236AC500E7F268 /* ViewModel */,
+				8BE556E82BCBE12700133399 /* Model */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1013,6 +1019,14 @@
 			path = "Helper Views";
 			sourceTree = "<group>";
 		};
+		8BE556E82BCBE12700133399 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BE556E92BCBE13A00133399 /* AuthServiceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8BE5603A2B210C1F00B28B9A /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1206,7 +1220,9 @@
 				8B8550332BA7961000F7859E /* OnboardingQuestionsView.swift in Sources */,
 				8B0930FD2BC2043C00A1B746 /* SixthQuestionViewModel.swift in Sources */,
 				8B8550372BA7A76400F7859E /* BarProgressStyle.swift in Sources */,
+				8BE556EA2BCBE13A00133399 /* AuthServiceModel.swift in Sources */,
 				8B6F613F2B22658D00E7F268 /* EditProfileView.swift in Sources */,
+				8BE556E72BCBD81600133399 /* StringExtension.swift in Sources */,
 				8B6F617C2B236B2A00E7F268 /* RegistrationViewModel.swift in Sources */,
 				8B50C2DD2B1A54E500E5AD98 /* ChatAuditoriaView.swift in Sources */,
 				8B6F617E2B236D9800E7F268 /* AuthService.swift in Sources */,
