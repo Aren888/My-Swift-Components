@@ -17,33 +17,33 @@ struct OnboardingQuestionsView: View {
             
             switch viewModel.nextViewCount {
             case 0:
-                FirstQuestionView()
+                FirstQuestionView(onboardingViewModel: viewModel)
                 Spacer()
-                ContinueButton(viewModel: viewModel, buttonTitle: "Next")
+                ContinueButton(viewModel: viewModel, buttonTitle: "Next", isContinueButtonEnabled: $viewModel.isContinueButtonEnabled)
             case 1:
-                SecondQuestionView()
+                SecondQuestionView(onboardingViewModel: viewModel)
                 Spacer()
-                ContinueButton(viewModel: viewModel, buttonTitle: "Proceed")
+                ContinueButton(viewModel: viewModel, buttonTitle: "Proceed", isContinueButtonEnabled: $viewModel.isContinueButtonEnabled)
             case 2:
-                ThirdQuestionView()
+                ThirdQuestionView(onboardingViewModel: viewModel)
                 Spacer()
-                ContinueButton(viewModel: viewModel, buttonTitle: "Advance")
+                ContinueButton(viewModel: viewModel, buttonTitle: "Advance", isContinueButtonEnabled: $viewModel.isContinueButtonEnabled)
             case 3:
-                FourthQuestionView()
+                FourthQuestionView(onboardingViewModel: viewModel)
                 Spacer()
-                ContinueButton(viewModel: viewModel, buttonTitle: "Move On")
+                ContinueButton(viewModel: viewModel, buttonTitle: "Move On", isContinueButtonEnabled: $viewModel.isContinueButtonEnabled)
             case 4:
-                FifthQuestionView()
+                FifthQuestionView(onboardingViewModel: viewModel)
                 Spacer()
-                ContinueButton(viewModel: viewModel, buttonTitle: "Next Step")
+                ContinueButton(viewModel: viewModel, buttonTitle: "Next Step", isContinueButtonEnabled: $viewModel.isContinueButtonEnabled)
             case 5:
                 SixthQuestionView()
                 Spacer()
-                ContinueButton(viewModel: viewModel, buttonTitle: "Continue Forward")
+                ContinueButton(viewModel: viewModel, buttonTitle: "Continue Forward", isContinueButtonEnabled: .constant(true))
             case 6:
                 FinishQuestionView()
                 Spacer()
-                ContinueButton(viewModel: viewModel, buttonTitle: "Get Started", isPresentingLoginView: true)
+                ContinueButton(viewModel: viewModel, buttonTitle: "Go To Learn!", isPresentingLoginView: true, isContinueButtonEnabled: .constant(true))
             default:
                 EmptyView()
             }

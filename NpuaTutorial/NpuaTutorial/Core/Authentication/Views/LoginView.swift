@@ -16,7 +16,7 @@ struct LoginView: View {
             
             Spacer()
             
-            Image("ai-model-image-1")
+            Image("ai-model-image-6")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 200)

@@ -8,14 +8,31 @@
 import Foundation
 
 class ExploreViewModel: ObservableObject {
-    @Published var users = [User]()
     
+    @Published var users = [User]()
+    @Published var isLoading: Bool = false
+
     init() {
-        Task { try await fetchUsers() }
+        loadData()
     }
     
-    @MainActor
-    private func fetchUsers() async throws {
-        self.users = try await UserService.fetchUsers()
+    func loadData() {
+        isLoading = true
+        Task {
+            do {
+                let fetchedUsers = try await UserService.fetchUsers()
+                DispatchQueue.main.async { [weak self] in
+                    self?.users = fetchedUsers
+                    self?.isLoading = false
+                }
+            } catch {
+                print("Error fetching users: \(error)")
+                DispatchQueue.main.async { [weak self] in
+                    self?.isLoading = false
+                }
+            }
+        }
     }
 }
+
+

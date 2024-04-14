@@ -11,7 +11,8 @@ import SwiftUI
 struct FourthQuestionView: View {
     
     @StateObject var viewModel = FourthQuestionViewModel()
-    
+    @ObservedObject var onboardingViewModel: OnboardingQuestionsViewModel
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -40,6 +41,7 @@ struct FourthQuestionView: View {
                         Button {
                             withAnimation {
                                 viewModel.selectedButtonIndex = index
+                                onboardingViewModel.isContinueButtonEnabled = true
                             }
                         } label: {
                             HStack() {

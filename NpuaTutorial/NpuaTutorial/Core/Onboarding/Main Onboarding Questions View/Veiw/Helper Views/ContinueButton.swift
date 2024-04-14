@@ -12,6 +12,7 @@ struct ContinueButton: View {
     @ObservedObject var viewModel: OnboardingQuestionsViewModel
     @State var buttonTitle: String
     @State var isPresentingLoginView: Bool = false
+    @Binding var isContinueButtonEnabled: Bool
     
     var body: some View {
         if !isPresentingLoginView {
@@ -23,25 +24,26 @@ struct ContinueButton: View {
             }) {
                 Text(buttonTitle)
                     .fontWeight(.semibold)
-                    .foregroundColor(.black)
+                    .foregroundColor(isContinueButtonEnabled ? .white : .gray)
                     .padding(.vertical, 15)
                     .frame(maxWidth: .infinity)
                     .background {
                         Capsule()
-                            .fill(Color.white.gradient)
+                            .fill(isContinueButtonEnabled ? Color.black.gradient : Color.white.gradient)
                             .shadow(radius: 10)
                     }
             }
+            .disabled(!isContinueButtonEnabled)
         } else {
             NavigationLink(destination: LoginView()) {
                 Text(buttonTitle)
                     .fontWeight(.semibold)
-                    .foregroundColor(.black)
+                    .foregroundColor(isContinueButtonEnabled ? .white : .gray)
                     .padding(.vertical, 15)
                     .frame(maxWidth: .infinity)
                     .background {
                         Capsule()
-                            .fill(Color.white.gradient)
+                            .fill(isContinueButtonEnabled ? Color.black.gradient : Color.white.gradient)
                             .shadow(radius: 10)
                     }
             }

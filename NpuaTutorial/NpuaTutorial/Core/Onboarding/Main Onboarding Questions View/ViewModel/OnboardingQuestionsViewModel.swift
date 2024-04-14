@@ -14,7 +14,7 @@ class OnboardingQuestionsViewModel: ObservableObject {
     @Published var nextViewCount: Int = 0
     @Published var progressValue: Double = 0.0
     @Published var progressIndex: Double = 0.1
-    
+    @Published var isContinueButtonEnabled: Bool = false
     // MARK: - Progress Control Functions
     
     /// Decreases the progress index by 0.1 if it's greater than 0.1 and updates the progress.
@@ -55,5 +55,6 @@ class OnboardingQuestionsViewModel: ObservableObject {
             progressValue = progressIndex / 0.7
         }
         percent = Int(progressValue * 100)
+        isContinueButtonEnabled = false
     }
 }
