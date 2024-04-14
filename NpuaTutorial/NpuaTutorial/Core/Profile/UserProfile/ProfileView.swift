@@ -11,28 +11,31 @@ struct ProfileView: View {
     let user: User
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(spacing: 20) {
-                
-                ProfileHeaderView(user: user)
-                
-                Button {
-                    
-                } label: {
-                    Text("Follow")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                        .frame(width: 352, height: 32)
-                        .background(.black)
-                        .cornerRadius(8)
+        ZStack {
+            HomeBackgroundCirclesView()
+            VStack {
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 20) {
+                        
+                        ProfileHeaderView(user: user)
+                        
+                        Button {} label: {
+                            Text("Follow")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(.white)
+                                .frame(width: 352, height: 32)
+                                .background(.black)
+                                .cornerRadius(8)
+                        }
+                        
+                        UserContentListView(user: user)
+                    }
                 }
-                
-                UserContentListView(user: user)
+                .navigationBarTitleDisplayMode(.inline)
+                .padding(.horizontal)
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .padding(.horizontal)
     }
 }
 

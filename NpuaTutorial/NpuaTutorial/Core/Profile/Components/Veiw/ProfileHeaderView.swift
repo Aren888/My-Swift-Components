@@ -18,7 +18,6 @@ struct ProfileHeaderView: View {
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 12) {
-                // Full name and username
                 VStack(alignment: .leading, spacing: 4) {
                     Text(user?.fullName ?? "")
                         .font(.title2)
@@ -33,13 +32,18 @@ struct ProfileHeaderView: View {
                         .font(.footnote)
                 }
                 
-                Text("2 followers")
+                Text("\(Int.random(in: 100..<999)) followers")
                     .font(.caption)
                     .foregroundStyle(.gray)
             }
             Spacer()
             CircularProfileImageView(user: user, size: .large)
         }
+       
+        .padding(.vertical, 10)
+        .padding(.horizontal)
+        .background(.white.gradient.opacity(0.8))
+        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
     }
 }
 

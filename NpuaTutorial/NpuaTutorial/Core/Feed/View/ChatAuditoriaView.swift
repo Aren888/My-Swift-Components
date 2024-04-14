@@ -12,27 +12,36 @@ struct ChatAuditoriaView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView(showsIndicators: false) {
-                LazyVStack {
-                    ForEach(viewModel.threads) { thread in
-                        ThreadCell(thread: thread)
+            ZStack {
+                HomeBackgroundCirclesView()
+                VStack {
+                    if viewModel.isLoading {
+                        LoadingView()
+                    } else {
+                        ScrollView(showsIndicators: false) {
+                            LazyVStack {
+                                ForEach(viewModel.threads) { thread in
+                                    ThreadCell(thread: thread)
+                                }
+                            }
+                        }
+                        .refreshable {
+                            Task {
+                                try await viewModel.fetchThreads()
+                            }
+                        }
+                        .navigationTitle("Threads")
+                        .navigationBarTitleDisplayMode(.inline)
                     }
                 }
             }
-            .refreshable {
-                Task { try await viewModel.fetchThreads() }
-            }
-            .navigationTitle("Threads")
-            .navigationBarTitleDisplayMode(.inline)
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    
-                } label: {
-                    Image(systemName: "arrow.counterclockwise")
-                        .foregroundStyle(.black)
-                }
+        .task {
+            do {
+                try await viewModel.fetchThreads()
+                viewModel.isLoading = false
+            } catch {
+                print("Error fetching threads: \(error)")
             }
         }
     }

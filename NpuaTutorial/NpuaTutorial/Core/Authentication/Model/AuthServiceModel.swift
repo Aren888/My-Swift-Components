@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseFirestoreSwift
+import SwiftUI
 
 enum AuthError: Error {
     case emailAlreadyInUse

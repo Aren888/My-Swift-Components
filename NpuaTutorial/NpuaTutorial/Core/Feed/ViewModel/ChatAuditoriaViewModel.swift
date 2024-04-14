@@ -10,6 +10,7 @@ import Foundation
 @MainActor
 class ChatAuditoriaViewModel: ObservableObject {
     @Published var threads = [Thread]()
+    @Published var isLoading: Bool = true
     
     init() {
         Task { try await fetchThreads() }

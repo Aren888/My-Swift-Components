@@ -12,6 +12,7 @@ import SwiftUI
 
 class CurrentUserProfileViewModel: ObservableObject {
     @Published var currentUser: User?
+    @Published var isLoading: Bool = true
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -21,6 +22,7 @@ class CurrentUserProfileViewModel: ObservableObject {
     private func setupSubscribers() {
         UserService.shared.$currentUser.sink { [ weak self ] user in
             self?.currentUser = user
+            self?.isLoading = (self?.currentUser == nil)
         }.store(in: &cancellables)
     }
 }
