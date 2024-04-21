@@ -18,6 +18,7 @@ class ChatAuditoriaViewModel: ObservableObject {
     
     func fetchThreads() async throws {
         self.threads = try await ThreadService.fetchThreads()
+        self.isLoading = false
         try await fetchUserDataForThreads()
     }
     

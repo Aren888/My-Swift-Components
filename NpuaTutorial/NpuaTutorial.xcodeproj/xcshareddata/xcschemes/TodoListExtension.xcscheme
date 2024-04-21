@@ -30,8 +30,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B50C2AE2B1919EC00E5AD98"
-               BuildableName = "NpuaTutorial.app"
-               BlueprintName = "NpuaTutorial"
+               BuildableName = "Tong Ai.app"
+               BlueprintName = "Tong Ai"
                ReferencedContainer = "container:NpuaTutorial.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -71,8 +71,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B50C2AE2B1919EC00E5AD98"
-            BuildableName = "NpuaTutorial.app"
-            BlueprintName = "NpuaTutorial"
+            BuildableName = "Tong Ai.app"
+            BlueprintName = "Tong Ai"
             ReferencedContainer = "container:NpuaTutorial.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -107,8 +107,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B50C2AE2B1919EC00E5AD98"
-            BuildableName = "NpuaTutorial.app"
-            BlueprintName = "NpuaTutorial"
+            BuildableName = "Tong Ai.app"
+            BlueprintName = "Tong Ai"
             ReferencedContainer = "container:NpuaTutorial.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -11,7 +11,7 @@ struct CurrentUserProfileView: View {
     
     @StateObject var viewModel = CurrentUserProfileViewModel()
     @State private var showEditProfile = false
-
+    
     private var currentUser: User? {
         return viewModel.currentUser
     }
@@ -28,6 +28,8 @@ struct CurrentUserProfileView: View {
                             VStack(spacing: 10) {
                                 
                                 ProfileHeaderView(user: currentUser)
+                                    .padding(.horizontal)
+                                
                                 Button {
                                     showEditProfile.toggle()
                                 } label: {
@@ -54,27 +56,26 @@ struct CurrentUserProfileView: View {
                                 EditProfileView(user: user)
                             }
                         })
-                        .toolbar {
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                Button {
-                                    AuthService.shared.signOut()
-                                } label: {
-                                    Text("Log Out")
-                                        .font(.subheadline)
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(.black)
-                                        .padding(.horizontal, 10)
-                                        .padding(.vertical, 2)
-                                        .background(.white.gradient)
-                                        .cornerRadius(8)
-                                }
-                            }
-                        }
-                        .padding(.horizontal)
+                        
                     }
                 }
             }
         }
+        .navigationBarItems(trailing:
+                                Button(action: {
+            AuthService.shared.signOut()
+        }) {
+            Text("Log Out")
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .foregroundStyle(.black)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 5)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(.white.gradient)
+                .cornerRadius(8)
+        }
+        )
     }
 }
 

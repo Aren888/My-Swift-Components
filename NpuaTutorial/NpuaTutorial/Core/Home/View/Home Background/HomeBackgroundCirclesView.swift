@@ -22,5 +22,5 @@ struct HomeBackgroundCirclesView: View {
 }
 
 #Preview {
-    ThreadsTabView()
+    TabsView()
 }

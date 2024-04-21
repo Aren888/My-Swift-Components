@@ -54,5 +54,5 @@ struct HomeGlassMorphismView: View {
 }
 
 #Preview {
-    ThreadsTabView()
+    TabsView()
 }

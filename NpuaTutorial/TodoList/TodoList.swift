@@ -86,7 +86,7 @@ struct TodoListEntryView : View {
             if activeList.isEmpty {
                 // MARK: No Tasks Text
 
-                Text("No Tasks")
+                Text("No Tasks 🥳")
                     .transition(.push(from: .bottom))
             }
         }

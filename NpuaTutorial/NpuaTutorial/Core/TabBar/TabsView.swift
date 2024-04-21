@@ -1,5 +1,5 @@
 //
-//  NpuaTabView.swift
+//  TabView.swift
 //  NpuaTutorial
 //
 //  Created by Solicy Ios on 01.12.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ThreadsTabView: View {
+struct TabsView: View {
     @State private var selectedTab = 0
     @State private var showCreateThreadView = false
     
@@ -47,9 +47,20 @@ struct ThreadsTabView: View {
                 .tabItem {
                     Image(systemName: selectedTab == 4 ? "person.fill" : "person")
                         .environment(\.symbolVariants, selectedTab == 4 ? .fill : .none)
+                    Text("Profile")
                 }
                 .onAppear { selectedTab = 4 }
                 .tag(4)
+            StatisticView()
+                .navigationTitle("Your Book Store Stats")
+                .tabItem {
+                    Image(systemName: selectedTab == 5 ? "chart.bar.fill" : "chart.bar")
+                        .environment(\.symbolVariants, selectedTab == 5 ? .fill : .none)
+                    Text("Statistics")
+                }
+                .onAppear { selectedTab = 5 }
+                .tag(5)
+
         }
         .onChange(of: selectedTab, { oldValue, newValue in
             showCreateThreadView = selectedTab == 2
@@ -65,5 +76,5 @@ struct ThreadsTabView: View {
 }
 
 #Preview {
-    ThreadsTabView()
+    TabsView()
 }

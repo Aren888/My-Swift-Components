@@ -41,5 +41,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    ThreadsTabView()
+    TabsView()
 }

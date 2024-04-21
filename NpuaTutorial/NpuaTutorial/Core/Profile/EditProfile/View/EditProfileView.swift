@@ -76,6 +76,10 @@ struct EditProfileView: View {
                         .stroke(Color(.systemGray4), lineWidth: 1)
                 }
                 .padding()
+                
+                if viewModel.isLoading {
+                    LoadingView()
+                }
             }
             .navigationTitle("Edit Profile")
             .navigationBarTitleDisplayMode(.inline)

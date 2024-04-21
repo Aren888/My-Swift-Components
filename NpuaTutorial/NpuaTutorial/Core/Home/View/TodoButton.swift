@@ -68,5 +68,5 @@ struct TodoButton: View {
 
 
 #Preview {
-    ThreadsTabView()
+    TabsView()
 }
