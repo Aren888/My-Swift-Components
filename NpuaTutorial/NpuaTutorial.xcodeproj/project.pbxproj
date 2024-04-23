@@ -40,6 +40,8 @@
 		4E75023F2BD1C10900C83AB5 /* ChartAxisExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75023E2BD1C10900C83AB5 /* ChartAxisExampleView.swift */; };
 		4E7502412BD1C11800C83AB5 /* ExpensesDetailGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7502402BD1C11800C83AB5 /* ExpensesDetailGridView.swift */; };
 		4E7502432BD1C12500C83AB5 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7502422BD1C12500C83AB5 /* ExpenseListView.swift */; };
+		4EFE651D2BD59E8200A4275A /* MainGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE651C2BD59E8200A4275A /* MainGameView.swift */; };
+		4EFE65212BD5A1F500A4275A /* MainGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE65202BD5A1F500A4275A /* MainGameViewModel.swift */; };
 		8B03BB962B5EC28C00A165FB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB952B5EC28C00A165FB /* HomeView.swift */; };
 		8B03BB982B5EC29300A165FB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB972B5EC29300A165FB /* HomeViewModel.swift */; };
 		8B03BB9A2B5ECF6D00A165FB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03BB992B5ECF6D00A165FB /* ColorExtension.swift */; };
@@ -226,6 +228,8 @@
 		4E7502402BD1C11800C83AB5 /* ExpensesDetailGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpensesDetailGridView.swift; path = NpuaTutorial/Statistics/view/ExpensesStats/ExpensesDetailGridView.swift; sourceTree = SOURCE_ROOT; };
 		4E7502422BD1C12500C83AB5 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpenseListView.swift; path = NpuaTutorial/Statistics/view/ExpensesStats/ExpenseListView.swift; sourceTree = SOURCE_ROOT; };
 		4EFE651A2BD5972300A4275A /* Tong-Ai-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tong-Ai-Info.plist"; sourceTree = "<group>"; };
+		4EFE651C2BD59E8200A4275A /* MainGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameView.swift; sourceTree = "<group>"; };
+		4EFE65202BD5A1F500A4275A /* MainGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameViewModel.swift; sourceTree = "<group>"; };
 		8B03BB952B5EC28C00A165FB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8B03BB972B5EC29300A165FB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8B03BB992B5ECF6D00A165FB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -474,6 +478,31 @@
 			path = ExpensesStats;
 			sourceTree = "<group>";
 		};
+		4EFE651B2BD59E7400A4275A /* Main Game */ = {
+			isa = PBXGroup;
+			children = (
+				4EFE651F2BD5A1EA00A4275A /* ViewModel */,
+				4EFE651E2BD5A1E700A4275A /* View */,
+			);
+			path = "Main Game";
+			sourceTree = "<group>";
+		};
+		4EFE651E2BD5A1E700A4275A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EFE651C2BD59E8200A4275A /* MainGameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EFE651F2BD5A1EA00A4275A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4EFE65202BD5A1F500A4275A /* MainGameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8B03BB922B5EC26900A165FB /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +615,7 @@
 				8B60256C2B8526880099C960 /* NpuaTutorial.entitlements */,
 				8B50C2C72B191A6800E5AD98 /* App */,
 				8B50C2C82B191A6E00E5AD98 /* Core */,
+				4EFE651B2BD59E7400A4275A /* Main Game */,
 				4E7501DD2BD1B1A700C83AB5 /* Statistics */,
 				8B50C2C92B191A8100E5AD98 /* Extensions */,
 				8B50C2CA2B191A8F00E5AD98 /* Model */,
@@ -1398,6 +1428,7 @@
 				4E7502092BD1BD9700C83AB5 /* Sale.swift in Sources */,
 				8B6F617C2B236B2A00E7F268 /* RegistrationViewModel.swift in Sources */,
 				8B50C2DD2B1A54E500E5AD98 /* ChatAuditoriaView.swift in Sources */,
+				4EFE65212BD5A1F500A4275A /* MainGameViewModel.swift in Sources */,
 				8B6F617E2B236D9800E7F268 /* AuthService.swift in Sources */,
 				4E7502072BD1BD8600C83AB5 /* Customer.swift in Sources */,
 				8BCBA7652B4C0ADB001BBC28 /* User.swift in Sources */,
@@ -1437,6 +1468,7 @@
 				8B9186A92B73ECA80069049A /* TodoView.swift in Sources */,
 				4E75021B2BD1BF6000C83AB5 /* DailySalesChartView.swift in Sources */,
 				4E75020D2BD1BDBC00C83AB5 /* ProgressViewModel.swift in Sources */,
+				4EFE651D2BD59E8200A4275A /* MainGameView.swift in Sources */,
 				4E7502192BD1BF4C00C83AB5 /* DetailBookSalesView.swift in Sources */,
 				4E75021D2BD1BF7C00C83AB5 /* WeeklySalesChartView.swift in Sources */,
 				8BCBA7532B4C09EC001BBC28 /* ProfileHeaderView.swift in Sources */,

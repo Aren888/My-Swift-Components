@@ -16,16 +16,30 @@ struct HomeView: View {
         NavigationView {
             ZStack {
                 HomeBackgroundCirclesView()
-                VStack {
+                VStack(spacing: 0) {
+                    
+                    TodoButton(blurView: $blurView, cornerRadius: .constant(10), viewModel: Binding.constant(viewModel))
+
                     ScrollView(showsIndicators: false) {
                         ForEach(viewModel.indexSections, id: \.self) { value in
                             
-                            if value == 1 {
-                                TodoButton(blurView: $blurView, cornerRadius: $viewModel.cornerRadius, viewModel: Binding.constant(viewModel))
-                            } else {
+                            ZStack{
                                 HomeGlassMorphismView(viewModel: viewModel, blurView: blurView)
-                                    .frame(maxWidth: .infinity, minHeight: UIScreen.main.bounds.height / 8, maxHeight: .infinity)
+                                    .frame(maxWidth: .infinity, minHeight: UIScreen.main.bounds.height / 10, maxHeight: .infinity)
+                                     
+                                
+                                NavigationLink("\(viewModel.indexSectionsTitles[value]) \(value).") {
+                                    
+                                    MainGameView()
+                                }
+                                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                                .font(.system(size: 18, weight: .semibold, design: .monospaced))
+                                .shadow(color: .white, radius: 1, x: 1.0, y: 1.0)
+                                .padding()
+                                .padding(.horizontal, 26)
+                                
                             }
+                            
                         }
                     }
                     .clipShape(RoundedRectangle(cornerRadius: viewModel.cornerRadius, style: .continuous))

@@ -14,55 +14,52 @@ struct TodoButton: View {
     @Binding var viewModel: HomeViewModel
     
     var body: some View {
-            NavigationLink(destination: TodoView()) {
-                
-                ZStack {
-                    HomeGlassMorphismView(viewModel: viewModel, blurView: blurView)
-                        .frame(maxWidth: .infinity, minHeight: UIScreen.main.bounds.height / 8, maxHeight: .infinity)
-                    
-                    RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                        .fill(
-                            .linearGradient(colors: [
-                                .purple.opacity(0.25),
-                                .purple.opacity(0.25)
-                            ], startPoint: .topLeading, endPoint: .bottomTrailing)
-                        )
-                        .blur(radius: 5)
-                        .padding()
-                    
-                    RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                        .stroke(
-                            .linearGradient(colors: [
-                                .purple.opacity(1),
-                                .clear,
-                                .white.opacity(0.5),
-                                .white.opacity(1)
-                            ], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 1
-                        )
-                        .padding()
-                    
-                    HStack {
-                        VStack {
-                            Text("Organize your work")
-                            Text("and life, finally.")
-                        }
-                        
-                        Spacer()
-                        Image(systemName: "list.bullet.clipboard")
-                            .resizable()
-                            .scaledToFit()
-                            .frame( height: 30)
-                    }
-                    .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing))
-                    .font(.system(size: 18, weight: .semibold, design: .monospaced))
-                    .shadow(color: .white, radius: 1, x: 1.0, y: 1.0)
+        NavigationLink(destination: TodoView()) {
+            ZStack {
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .fill(
+                        .linearGradient(colors: [
+                            .purple.opacity(0.25),
+                            .purple.opacity(0.25)
+                        ], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                    .blur(radius: 5)
+                    .frame(height: 80)
                     .padding()
-                    .padding(.horizontal)
+                
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .stroke(
+                        .linearGradient(colors: [
+                            .purple.opacity(1),
+                            .clear,
+                            .white.opacity(0.5),
+                            .white.opacity(1)
+                        ], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 1
+                    )
+                    .frame(height: 80)
+                    .padding()
+                
+                HStack {
+                    VStack {
+                        Text("Organize your work")
+                        Text("and life, finally.")
+                    }
+                    
+                    Spacer()
+                    Image(systemName: "list.bullet.clipboard")
+                        .resizable()
+                        .scaledToFit()
+                        .frame( height: 30)
                 }
+                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                .font(.system(size: 18, weight: .semibold, design: .monospaced))
+                .shadow(color: .white, radius: 1, x: 1.0, y: 1.0)
+                .frame(height: 80)
+                .padding()
+                .padding(.horizontal)
             }
-             
         }
-    
+    }
 }
 
 
